@@ -77,18 +77,19 @@ const Home: NextPage = () => {
           Generate your own personalized workout routine in seconds
         </h1>
 
-        <div className="sm:max-w-md w-full mt-28">
-          <div className="flex mb-5 items-center space-x-3">
+        <div className="sm:max-w-md w-full mt-20">
+
+          <div className="flex items-center space-x-3">
             <Image src="/frequency.svg" width={22} height={22} alt="1 icon" />
-            <p className="text-left font-medium">Amount of workouts per week:</p>
+            <p className="text-left font-medium my-5">Amount of workouts per week:</p>
           </div>
           <div className="block">
             <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
           </div>
 
-          <div className="flex mb-5 items-center space-x-3 mt-10">
+          <div className="flex mt-10 items-center space-x-3 mt-10">
             <Image src="/equipment.svg" width={22} height={22} alt="1 icon" />
-            <p className="text-left font-medium">What equipment do you have access to?</p>
+            <p className="text-left font-medium my-5">What equipment do you have access to?</p>
           </div>
           <div className="block">
             <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
@@ -102,7 +103,7 @@ const Home: NextPage = () => {
               alt="1 icon"
               className="sm:mb-0"
             />
-            <p className="text-left font-medium">
+            <p className="text-left font-medium my-5">
               What is your main goal?
             </p>
           </div>
@@ -110,13 +111,13 @@ const Home: NextPage = () => {
             value={goal}
             onChange={(e) => setGoal(e.target.value)}
             rows={1}
-            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-none focus:border-gray-500 focus:ring-gray-500 my-5"
+            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-none focus:border-gray-500 focus:ring-gray-500"
             placeholder={
               "e.g. Lose Weight"
             }
           />
 
-          <div className="flex mt-4 items-center space-x-3">
+          <div className="flex mt-10 items-center space-x-3">
             <Image
               src="/limitations.svg"
               width={22}
@@ -124,20 +125,19 @@ const Home: NextPage = () => {
               alt="1 icon"
               className="sm:mb-0"
             />
-            <p className="text-left font-medium">
+            <p className="text-left font-medium my-5">
               Name any limitations{" "}
               <span className="text-gray-400">
                 (or leave blank)
               </span>
               .
             </p>
-            
           </div>
           <textarea
             value={limitations}
             onChange={(e) => setLimitations(e.target.value)}
             rows={1}
-            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-none focus:border-gray-500 focus:ring-gray-500 my-5"
+            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-none focus:border-gray-500 focus:ring-gray-500"
             placeholder={
               "e.g. Sprained Ankle"
             }
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="bg-lime-400 rounded-xl text-black font-medium px-4 py-6 mt-5 hover:bg-lime-500 w-full"
+              className="bg-lime-400 rounded-xl text-black font-medium px-4 py-6 mt-16 hover:bg-lime-500 w-full"
               onClick={(e) => generateWorkout(e)}
             >
               <img src="/magic.svg" className="w-5 inline mb-1 mr-2"/> Generate your workouts
