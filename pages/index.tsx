@@ -73,11 +73,11 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="rounded-3xl bg-white flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-        <h1 className="sm:text-6xl text-3xl max-w-3xl font-bold text-slate-900 mt-28" data-aos="zoom-in">
+        <h1 className="sm:text-6xl text-2xl max-w-3xl font-bold text-slate-900 mt-20 sm:mt-28" data-aos="zoom-in">
           Generate your own personalized workout routine in seconds
         </h1>
 
-        <div className="sm:max-w-md w-full mt-20">
+        <div className="sm:max-w-md w-full mt-16">
 
           <div className="flex items-center space-x-3">
             <Image src="/frequency.svg" width={22} height={22} alt="1 icon" />
@@ -167,7 +167,7 @@ const Home: NextPage = () => {
         />
         <hr className="h-px bg-gray-700" />
           <AnimatePresence mode="wait">
-            <motion.div className="space-y-10 my-10 mb-24">
+            <motion.div className="space-y-10 my-10 mb-20 sm:mb-28">
               {generatedWorkouts && (
                 <>
                   <div>
