@@ -5,7 +5,15 @@
 	font-family: "satoshi";
 	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
 }
+@font-face {
+	font-family: "kenoky";
+	src: url("https://cortez.link/fonts/KenokyLight.otf");
+}
 
 * {
     font-family: "satoshi";
+}
+
+h1 {
+	font-family: "kenoky";
 }
