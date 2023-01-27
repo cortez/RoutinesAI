@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 import { OpenAIStream, OpenAIStreamPayload } from "../../utils/OpenAIStream";
 
 if (!process.env.OPENAI_API_KEY) {
-  throw new Error("Missing env var from OpenAI");
+  throw new Error("Missing OpenAI API Key");
 }
 
 export const config = {
@@ -25,7 +25,7 @@ const handler = async (req: NextRequest): Promise<Response> => {
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 200,
+    max_tokens: 250,
     stream: true,
     n: 1,
   };

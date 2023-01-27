@@ -4,33 +4,30 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import DropDown, { VibeType } from "../components/DropDown";
+import FrequencyDropDown, { FrequencyType } from "../components/FrequencyDropDown";
+import EquipmentDropDown, { EquipmentType } from "../components/EquipmentDropDown";
 import Footer from "../components/Footer";
-import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
-import ResizablePanel from "../components/ResizablePanel";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
-  const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Professional");
-  const [generatedBios, setGeneratedBios] = useState<String>("");
+  const [frequency, setFrequency] = useState<FrequencyType>("1");
+  const [equipment, setEquipment] = useState<EquipmentType>("Any Equipment");
+  const [goal, setGoal] = useState("");
+  const [limitations, setLimitations] = useState("");
+  const [generatedWorkouts, setGeneratedWorkouts] = useState<String>("");
 
-  console.log("Streamed response: ", generatedBios);
+  console.log("Streamed response: ", generatedWorkouts);
 
   const prompt =
-    vibe === "Funny"
-      ? `Generate 2 funny twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure there is a joke in there and it's a little ridiculous. Make sure each generated bio is at max 20 words and base it on this context: ${bio}${
-          bio.slice(-1) === "." ? "" : "."
-        }`
-      : `Generate 2 ${vibe} twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure each generated bio is at least 14 words and at max 20 words and base them on this context: ${bio}${
-          bio.slice(-1) === "." ? "" : "."
-        }`;
+    limitations === ""
+      ? `Generate ${frequency} workouts using ${equipment} with a goal to ${goal} and are clearly labeled "Workout Day (number) ((type of workout)): ", and so on. Generate the workouts at max 30 words and beginning with reps and sets, formatted with an "x" between, followed by the exercise name.`
+      : `Generate ${frequency} workouts using ${equipment} with a goal to ${goal} and are clearly labeled "Workout Day (number) ((type of workout)): ", and so on. Generate the workouts at max 30 words and beginning with reps and sets, formatted with an "x" between, followed by the exercise name. Include accommodations for someone with ${limitations}.`
 
-  const generateBio = async (e: any) => {
+  const generateWorkout = async (e: any) => {
     e.preventDefault();
-    setGeneratedBios("");
+    setGeneratedWorkouts("");
     setLoading(true);
     const response = await fetch("/api/generate", {
       method: "POST",
@@ -61,82 +58,105 @@ const Home: NextPage = () => {
       const { value, done: doneReading } = await reader.read();
       done = doneReading;
       const chunkValue = decoder.decode(value);
-      setGeneratedBios((prev) => prev + chunkValue);
+      setGeneratedWorkouts((prev) => prev + chunkValue);
     }
 
     setLoading(false);
   };
 
   return (
-    <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="flex max-w-full mx-auto flex-col items-center justify-center py-2 min-h-screen bg-black">
       <Head>
-        <title>Twitter Generator</title>
+        <title>AI Workouts</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <a
-          className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
-          href="https://github.com/Nutlope/twitterbio"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Github />
-          <p>Star on GitHub</p>
-        </a>
-        <h1 className="sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900">
-          Generate your next Twitter bio in seconds
+      <main className="rounded-3xl bg-white flex flex-1 w-full flex-col items-center justify-center text-center px-4">
+        <h1 className="sm:text-6xl text-4xl max-w-3xl font-bold text-slate-900 mt-28">
+          Generate your own personalized workout routine in seconds
         </h1>
-        <p className="text-slate-500 mt-5">18,167 bios generated so far.</p>
-        <div className="max-w-xl">
+
+        <div className="sm:max-w-md w-full mt-28">
+          <div className="flex mb-5 items-center space-x-3">
+            <Image src="/frequency.svg" width={22} height={22} alt="1 icon" />
+            <p className="text-left font-medium">Amount of workouts per week:</p>
+          </div>
+          <div className="block">
+            <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
+          </div>
+
+          <div className="flex mb-5 items-center space-x-3 mt-10">
+            <Image src="/equipment.svg" width={22} height={22} alt="1 icon" />
+            <p className="text-left font-medium">What equipment do you have access to?</p>
+          </div>
+          <div className="block">
+            <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
+          </div>
+
           <div className="flex mt-10 items-center space-x-3">
             <Image
-              src="/1-black.png"
-              width={30}
-              height={30}
+              src="/goal.svg"
+              width={22}
+              height={22}
               alt="1 icon"
-              className="mb-5 sm:mb-0"
+              className="sm:mb-0"
             />
             <p className="text-left font-medium">
-              Copy your current bio{" "}
-              <span className="text-slate-500">
-                (or write a few sentences about yourself)
-              </span>
-              .
+              What is your main goal?
             </p>
           </div>
           <textarea
-            value={bio}
-            onChange={(e) => setBio(e.target.value)}
-            rows={4}
-            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+            value={goal}
+            onChange={(e) => setGoal(e.target.value)}
+            rows={1}
+            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-none focus:border-gray-500 focus:ring-gray-500 my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "e.g. Lose Weight"
             }
           />
-          <div className="flex mb-5 items-center space-x-3">
-            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+
+          <div className="flex mt-4 items-center space-x-3">
+            <Image
+              src="/limitations.svg"
+              width={22}
+              height={22}
+              alt="1 icon"
+              className="sm:mb-0"
+            />
+            <p className="text-left font-medium">
+              Name any limitations{" "}
+              <span className="text-gray-400">
+                (or leave blank)
+              </span>
+              .
+            </p>
+            
           </div>
-          <div className="block">
-            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
-          </div>
+          <textarea
+            value={limitations}
+            onChange={(e) => setLimitations(e.target.value)}
+            rows={1}
+            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-none focus:border-gray-500 focus:ring-gray-500 my-5"
+            placeholder={
+              "e.g. Sprained Ankle"
+            }
+          />
 
           {!loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
-              onClick={(e) => generateBio(e)}
+              className="bg-lime-400 rounded-xl text-black font-medium px-4 py-6 mt-5 hover:bg-lime-500 w-full"
+              onClick={(e) => generateWorkout(e)}
             >
-              Generate your bio &rarr;
+              <img src="/magic.svg" className="w-5 inline mb-1 mr-2"/> Generate your workouts
             </button>
           )}
           {loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              className="bg-lime-400 rounded-xl text-white font-medium px-4 py-6 sm:mt-7 mt-6 hover:bg-lime-500 w-full"
               disabled
             >
-              <LoadingDots color="white" style="large" />
+              <LoadingDots color="black" style="large" />
             </button>
           )}
         </div>
@@ -145,34 +165,33 @@ const Home: NextPage = () => {
           reverseOrder={false}
           toastOptions={{ duration: 2000 }}
         />
-        <hr className="h-px bg-gray-700 border-1 dark:bg-gray-700" />
-        <ResizablePanel>
+        <hr className="h-px bg-gray-700" />
           <AnimatePresence mode="wait">
-            <motion.div className="space-y-10 my-10">
-              {generatedBios && (
+            <motion.div className="space-y-10 my-10 mb-24">
+              {generatedWorkouts && (
                 <>
                   <div>
-                    <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
-                      Your generated bios
+                    <h2 className="sm:text-4xl text-3xl font-bold text-gray-900 mx-auto mt-10">
+                      Your generated workouts
                     </h2>
                   </div>
-                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
-                    {generatedBios
-                      .substring(generatedBios.indexOf("1") + 3)
-                      .split("2.")
-                      .map((generatedBio) => {
+                  <div className="space-y-4 flex flex-col items-center justify-center max-w-full mx-auto">
+                    {generatedWorkouts
+                      .split("Workout ")
+                      .splice(1)
+                      .map((generatedWorkout) => {
                         return (
                           <div
-                            className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
+                            className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-copy"
                             onClick={() => {
-                              navigator.clipboard.writeText(generatedBio);
-                              toast("Bio copied to clipboard", {
-                                icon: "✂️",
+                              navigator.clipboard.writeText(generatedWorkout);
+                              toast("Copied text!", {
+                                icon: "",
                               });
                             }}
-                            key={generatedBio}
+                            key={generatedWorkout}
                           >
-                            <p>{generatedBio}</p>
+                            <p>{generatedWorkout}</p>
                           </div>
                         );
                       })}
@@ -181,7 +200,6 @@ const Home: NextPage = () => {
               )}
             </motion.div>
           </AnimatePresence>
-        </ResizablePanel>
       </main>
       <Footer />
     </div>
