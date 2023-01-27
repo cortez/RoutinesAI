@@ -182,11 +182,10 @@ const Home: NextPage = () => {
                       .map((generatedWorkout) => {
                         return (
                           <div
-                            className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-copy"
+                            className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-pointer"
                             onClick={() => {
                               navigator.clipboard.writeText(generatedWorkout);
                               toast("Copied text!", {
-                                icon: "",
                               });
                             }}
                             key={generatedWorkout}
