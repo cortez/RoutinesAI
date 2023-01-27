@@ -21,6 +21,7 @@
     "react-use-measure": "^2.1.1"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/node": "18.11.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",

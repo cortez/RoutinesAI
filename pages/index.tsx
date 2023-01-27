@@ -73,7 +73,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="rounded-3xl bg-white flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-        <h1 className="sm:text-6xl text-3xl max-w-3xl font-bold text-slate-900 mt-28">
+        <h1 className="sm:text-6xl text-3xl max-w-3xl font-bold text-slate-900 mt-28" data-aos="zoom-in">
           Generate your own personalized workout routine in seconds
         </h1>
 
@@ -205,5 +205,4 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
 export default Home;
