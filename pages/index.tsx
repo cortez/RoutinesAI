@@ -165,7 +165,7 @@ const Home: NextPage = () => {
           )}
         </div>
         <Toaster
-          position="top-center"
+          position="bottom-right"
           reverseOrder={false}
           toastOptions={{ duration: 2000 }}
         />
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
                             className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-pointer"
                             onClick={() => {
                               navigator.clipboard.writeText(generatedWorkout);
-                              toast("Copied text!", {
+                              toast("Copied workout", {
                               });
                             }}
                             key={generatedWorkout}
