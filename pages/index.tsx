@@ -79,23 +79,23 @@ const Home: NextPage = () => {
 
         <div className="sm:max-w-md w-full mt-20">
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <Image src="/frequency.svg" width={22} height={22} alt="1 icon" />
-            <p className="text-left font-medium my-5">Amount of workouts per week:</p>
+            <p className="font-normal text-left my-5">Amount of workouts per week:</p>
           </div>
           <div className="block">
             <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
           </div>
 
-          <div className="flex mt-10 items-center space-x-3 mt-10">
+          <div className="flex mt-10 items-center space-x-2 mt-10">
             <Image src="/equipment.svg" width={22} height={22} alt="1 icon" />
-            <p className="text-left font-medium my-5">What equipment do you have access to?</p>
+            <p className="font-normal text-left my-5">What equipment do you have access to?</p>
           </div>
           <div className="block">
             <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
           </div>
 
-          <div className="flex mt-10 items-center space-x-3">
+          <div className="flex mt-10 items-center space-x-2">
             <Image
               src="/goal.svg"
               width={22}
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
               alt="1 icon"
               className="sm:mb-0"
             />
-            <p className="text-left font-medium my-5">
+            <p className="font-normal text-left my-5">
               What is your main goal?
             </p>
           </div>
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
             }
           />
 
-          <div className="flex mt-10 items-center space-x-3">
+          <div className="flex mt-10 items-center space-x-2">
             <Image
               src="/limitations.svg"
               width={22}
@@ -125,7 +125,7 @@ const Home: NextPage = () => {
               alt="1 icon"
               className="sm:mb-0"
             />
-            <p className="text-left font-medium my-5">
+            <p className="font-normal text-left my-5">
               Name any limitations{" "}
               <span className="text-gray-400">
                 (or leave blank)
@@ -145,15 +145,15 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="bg-lime-400 rounded-xl text-black font-medium px-4 py-8 mt-16 hover:bg-lime-500 w-full"
+              className="font-medium bg-lime-400 rounded-xl text-black font-medium px-4 py-8 mt-16 hover:bg-lime-500 w-full"
               onClick={(e) => generateWorkout(e)}
             >
-              <img src="/magic.svg" className="w-5 inline mb-1 mr-2"/> Generate your workouts
+              <img src="/magic.svg" className="w-5 inline mb-1 mr-1"/> Generate your workouts
             </button>
           )}
           {loading && (
             <button
-              className="bg-lime-400 rounded-xl text-white font-medium px-4 py-6 sm:mt-7 mt-6 hover:bg-lime-500 w-full"
+              className="font-medium bg-lime-400 rounded-xl text-white font-medium px-4 py-8 sm:mt-7 mt-6 hover:bg-lime-500 w-full"
               disabled
             >
               <LoadingDots color="black" style="large" />

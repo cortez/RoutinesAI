@@ -4,6 +4,12 @@
 @font-face {
 	font-family: "satoshi";
 	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "satoshi";
+	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Bold.otf");
+	font-weight: 500;
 }
 @font-face {
 	font-family: "clash";
@@ -12,6 +18,7 @@
 
 * {
     font-family: "satoshi";
+	font-weight: 400;
 }
 
 h1 {
