@@ -15,9 +15,9 @@ class MyDocument extends Document {
             property="og:description"
             content="Personalized workout plans generated with artificial intelligence."
           />
-          <meta property="og:title" content="Routines" />
+          <meta property="og:title" content="Routines AI" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="AI Workouts" />
+          <meta name="twitter:title" content="Routines AI" />
           <meta
             name="twitter:description"
             content="Generate your own personalized workout routine in seconds."
