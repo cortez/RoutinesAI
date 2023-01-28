@@ -4,7 +4,7 @@ export default function Footer() {
       <div>
         Powered by{" "}
         <a
-          href="https://openai.com/"
+          href="https://openai.com/api"
           target="_blank"
           rel="noreferrer"
           className="hover:text-gray-600"
@@ -13,7 +13,7 @@ export default function Footer() {
         </a>{" "}
         and{" "}
         <a
-          href="https://vercel.com/"
+          href="https://vercel.com/features/edge-functions"
           target="_blank"
           rel="noreferrer"
           className="hover:text-gray-600"
