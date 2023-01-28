@@ -24,3 +24,11 @@
 h1 {
 	font-family: "clash";
 }
+
+.genbutton {
+	background-color: #FBC901;
+}
+
+.genbutton:hover {
+	background-color: #F1B92D;
+}

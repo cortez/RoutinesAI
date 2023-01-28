@@ -79,7 +79,7 @@ const Home: NextPage = () => {
 
         <div className="sm:max-w-md w-full mt-20">
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
             <Image src="/frequency.svg" width={22} height={22} alt="1 icon" />
             <p className="font-normal text-left my-5">Amount of workouts per week:</p>
           </div>
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
             <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
           </div>
 
-          <div className="flex mt-10 items-center space-x-2 mt-10 ">
+          <div className="flex mt-10 items-center space-x-3 mt-10 ">
             <Image src="/equipment.svg" width={22} height={22} alt="1 icon" />
             <p className="font-normal text-left my-5">What equipment do you have access to?</p>
           </div>
@@ -95,7 +95,7 @@ const Home: NextPage = () => {
             <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
           </div>
 
-          <div className="flex mt-10 items-center space-x-2">
+          <div className="flex mt-10 items-center space-x-3">
             <Image
               src="/goal.svg"
               width={22}
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
             }
           />
 
-          <div className="flex mt-10 items-center space-x-2">
+          <div className="flex mt-10 items-center space-x-3">
             <Image
               src="/limitations.svg"
               width={22}
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="font-medium bg-lime-400 rounded-xl text-black font-medium px-4 py-8 mt-16 hover:bg-lime-500 w-full focus:outline-lime-500"
+              className="font-medium genbutton rounded-xl text-black font-medium px-4 py-8 mt-16 w-full focus:outline-lime-500"
               onClick={(e) => generateWorkout(e)}
             >
               <img src="/magic.svg" className="w-5 inline mb-1 mr-1"/> Generate your workouts
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
           )}
           {loading && (
             <button
-              className="font-medium bg-lime-400 rounded-xl text-white font-medium px-4 py-8 sm:mt-7 mt-6 hover:bg-lime-500 w-full focus:outline-lime-500"
+              className="font-medium genbutton rounded-xl text-white font-medium px-4 py-8 sm:mt-7 mt-6 w-full focus:outline-lime-500"
               disabled
             >
               <LoadingDots color="black" style="large" />
