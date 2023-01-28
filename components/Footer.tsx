@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="text-center w-full sm:mt-8 mt-12 sm:mb-8 mb-4 items-center text-white">
       <div>
         <a
-          href="mailto:joseph@lcortez.com?subject=AI%20Workouts%20Feedback"
+          href="mailto:joseph@lcortez.com?subject=Routines%20AI%20Feedback"
           target="_blank"
           rel="noreferrer"
           className="text-white hover:bg-gray-700 py-2 px-3 bg-gray-800 rounded-xl focus:border-none"

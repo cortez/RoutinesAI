@@ -8,9 +8,9 @@ export default function Header() {
           rel="noreferrer"
       >
       <img src="../favicon.ico" className="h-6 -ml-1 mb-1 mr-1 inline" />
-        AI Workouts
+        Routines AI
       </Link>
-      <Link href="https://github.com/cortez/workouts" className="top-3 right-4 space-x-3 absolute hover:text-lime-400"
+      <Link href="https://github.com/cortez/routinesai" className="top-3 right-4 space-x-3 absolute hover:text-lime-400"
           target="_blank"
           rel="noreferrer"
       >

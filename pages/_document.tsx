@@ -10,12 +10,12 @@ class MyDocument extends Document {
             name="description"
             content="Personalized workout plans generated with artificial intelligence."
           />
-          <meta property="og:site_name" content="workouts.seph.us" />
+          <meta property="og:site_name" content="routinesai.com" />
           <meta
             property="og:description"
             content="Personalized workout plans generated with artificial intelligence."
           />
-          <meta property="og:title" content="AI Workouts" />
+          <meta property="og:title" content="Routines" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="AI Workouts" />
           <meta
@@ -24,11 +24,11 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://cortez.link/a/workouts-meta.png"
+            content="https://cortez.link/a/routines-meta.png"
           />
           <meta
             name="twitter:image"
-            content="https://cortez.link/a/workouts-meta.png"
+            content="https://cortez.link/a/routines-meta.png"
           />
         </Head>
         <body>
