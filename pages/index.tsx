@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import FrequencyDropDown, { FrequencyType } from "../components/FrequencyDropDown";
@@ -17,8 +16,6 @@ const Home: NextPage = () => {
   const [goal, setGoal] = useState("");
   const [limitations, setLimitations] = useState("");
   const [generatedWorkouts, setGeneratedWorkouts] = useState<String>("");
-
-  console.log("Streamed response: ", generatedWorkouts);
 
   const prompt =
     limitations === ""
@@ -80,7 +77,7 @@ const Home: NextPage = () => {
         <div className="sm:max-w-md w-full mt-20">
 
           <div className="flex items-center space-x-3">
-            <Image src="/frequency.svg" width={22} height={22} alt="1 icon" />
+            <img src="/frequency.svg" width={22} height="auto" alt="frequency icon" />
             <p className="font-normal text-left my-5">Amount of workouts per week:</p>
           </div>
           <div className="block">
@@ -88,7 +85,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex mt-10 items-center space-x-3 mt-10 ">
-            <Image src="/equipment.svg" width={22} height={22} alt="1 icon" />
+            <img src="/equipment.svg" width={22} height="auto" alt="equipment icon" />
             <p className="font-normal text-left my-5">What equipment do you have access to?</p>
           </div>
           <div className="block">
@@ -96,11 +93,11 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex mt-10 items-center space-x-3">
-            <Image
+            <img
               src="/goal.svg"
               width={22}
-              height={22}
-              alt="1 icon"
+              height="auto"
+              alt="goal icon"
               className="sm:mb-0"
             />
             <p className="font-normal text-left my-5">
@@ -118,11 +115,11 @@ const Home: NextPage = () => {
           />
 
           <div className="flex mt-10 items-center space-x-3">
-            <Image
+            <img
               src="/limitations.svg"
               width={22}
-              height={22}
-              alt="1 icon"
+              height="auto"
+              alt="limitations icon"
               className="sm:mb-0"
             />
             <p className="font-normal text-left my-5">
@@ -148,7 +145,14 @@ const Home: NextPage = () => {
               className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-black font-medium px-4 py-8 mt-16 w-full focus:outline-lime-500"
               onClick={(e) => generateWorkout(e)}
             >
-              <img src="/magic.svg" className="w-5 inline mb-1 mr-1"/> Generate your workouts
+              <img
+                src="/magic.svg"
+                width={22}
+                height="auto"
+                alt="magic icon"
+                className="inline mb-1 mr-2"
+              />
+              Generate your workouts
             </button>
           )}
           {loading && (
