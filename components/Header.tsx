@@ -7,7 +7,7 @@ export default function Header() {
           target="_blank"
           rel="noreferrer"
       >
-      <img src="../favicon.ico" className="h-6 mb-1 mr-1 inline" />
+      <img src="../favicon.ico" className="h-6 -ml-1 mb-1 mr-1 inline" />
         AI Workouts
       </Link>
       <Link href="https://github.com/cortez/workouts" className="top-3 right-4 space-x-3 absolute hover:text-lime-400"
