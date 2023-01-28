@@ -6,8 +6,8 @@
 	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
 }
 @font-face {
-	font-family: "kenoky";
-	src: url("https://cortez.link/fonts/KenokyLight.otf");
+	font-family: "clash";
+	src: url("https://cortez.link/fonts/ClashDisplay/ClashDisplay-Medium.ttf");
 }
 
 * {
@@ -15,5 +15,5 @@
 }
 
 h1 {
-	font-family: "kenoky";
+	font-family: "clash";
 }
