@@ -145,7 +145,7 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="bg-lime-400 rounded-xl text-black font-medium px-4 py-6 mt-16 hover:bg-lime-500 w-full"
+              className="bg-lime-400 rounded-xl text-black font-medium px-4 py-8 mt-16 hover:bg-lime-500 w-full"
               onClick={(e) => generateWorkout(e)}
             >
               <img src="/magic.svg" className="w-5 inline mb-1 mr-2"/> Generate your workouts
@@ -167,11 +167,11 @@ const Home: NextPage = () => {
         />
         <hr className="h-px bg-gray-700" />
           <AnimatePresence mode="wait">
-            <motion.div className="space-y-10 mb-14 sm:mb-28">
+            <motion.div className="space-y-10 mb-4 sm:mb-28">
               {generatedWorkouts && (
                 <>
                   <div>
-                    <h2 className="sm:text-4xl text-2xl font-bold text-gray-900 mx-auto mt-10">
+                    <h2 className="sm:text-4xl text-2xl font-bold text-gray-900 mx-auto mt-20">
                       Your generated workouts
                     </h2>
                   </div>
