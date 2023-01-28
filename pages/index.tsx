@@ -73,7 +73,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="rounded-3xl bg-white flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-        <h1 className="sm:text-5xl text-4xl max-w-3xl font-bold text-gray-900 mt-20 sm:mt-28" data-aos="zoom-in">
+        <h1 className="sm:text-5xl text-3xl max-w-3xl font-bold text-gray-900 mt-20 sm:mt-28" data-aos="zoom-in">
           Generate your own personalized workout routine in seconds
         </h1>
 
