@@ -21,12 +21,12 @@ export default function Footer() {
           Vercel Edge Functions
         </a>
       </div>
-      <div>
+      <div className="mt-5">
         <a
           href="mailto:joseph@lcortez.com?subject=AI%20Workouts%20Feedback"
           target="_blank"
           rel="noreferrer"
-          className="hover:text-gray-600"
+          className="text-white hover:bg-gray-700 py-2 px-3 bg-gray-800 rounded-xl"
         >
           Give feedback
         </a>

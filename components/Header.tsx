@@ -9,7 +9,7 @@ export default function Header() {
       >
         AI Workouts
       </Link>
-      <Link href="https://github.com/cortez/workouts" className="top-3 right-4  space-x-3 absolute hover:text-gray-600"
+      <Link href="https://github.com/cortez/workouts" className="top-3 right-4 space-x-3 absolute hover:text-gray-600"
           target="_blank"
           rel="noreferrer"
       >
