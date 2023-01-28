@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <div>
         <a
-          href="mailto:joseph+feedback@lcortez.com?subject=AI%20Workouts%20Feedback"
+          href="mailto:joseph@lcortez.com?subject=AI%20Workouts%20Feedback"
           target="_blank"
           rel="noreferrer"
           className="hover:text-gray-600"
