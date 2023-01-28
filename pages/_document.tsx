@@ -10,7 +10,7 @@ class MyDocument extends Document {
             name="description"
             content="Personalized workout plans generated with artificial intelligence."
           />
-          <meta property="og:site_name" content="ai.seph.us" />
+          <meta property="og:site_name" content="workouts.seph.us" />
           <meta
             property="og:description"
             content="Personalized workout plans generated with artificial intelligence."
