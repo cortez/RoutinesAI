@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="w-full bg-white text-black text-lg mb-11 flex">
-      <Link href="/" className="top-4 left-6 w-fit font-medium space-x-3 absolute hover:text-lime-400 transition"
+      <Link href="/" className="top-4 left-6 w-32 font-medium space-x-3 absolute hover:text-lime-400 transition"
           target="_blank"
           rel="noreferrer"
       >
