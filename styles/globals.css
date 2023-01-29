@@ -1,19 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-	font-family: "satoshi";
-	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
-	font-weight: 400;
-}
-@font-face {
-	font-family: "satoshi";
-	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Bold.otf");
-	font-weight: 500;
-}
-@font-face {
-	font-family: "clash";
-	src: url("https://cortez.link/fonts/ClashDisplay/ClashDisplay-Semibold.ttf");
+@layer base {
+	@font-face {
+		font-family: "satoshi";
+		src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
+		font-weight: 400;
+	}
+	@font-face {
+		font-family: "satoshi";
+		src: url("https://cortez.link/fonts/Satoshi/Satoshi-Bold.otf");
+		font-weight: 500;
+	}
+	@font-face {
+		font-family: "clash";
+		src: url("https://cortez.link/fonts/ClashDisplay/ClashDisplay-Semibold.ttf");
+	}
 }
 
 * {
