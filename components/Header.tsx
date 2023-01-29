@@ -8,7 +8,7 @@ export default function Header() {
           target="_blank"
           rel="noreferrer"
       >
-      <Image src="/logo.png" className="-ml-2 -mt-2 mr-1 inline" alt="logo icon" width={22} height={22} />
+      <Image src="/logo.svg" className="-ml-2 -mt-2 mr-1 inline" alt="logo icon" width={22} height={22} />
         Routines AI
       </Link>
       <Link href="https://github.com/cortez/RoutinesAI" className="top-4 right-6 font-medium space-x-3 absolute hover:text-gray-600"
