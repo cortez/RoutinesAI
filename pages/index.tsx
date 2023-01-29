@@ -131,8 +131,8 @@ const Home: NextPage = () => {
               >
                 <Image
                   src="/magic.svg"
-                  width={20}
-                  height={20}
+                  width={18}
+                  height={18}
                   alt="magic icon"
                   className="inline mb-1 mr-2"
                 />
