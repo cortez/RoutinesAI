@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -7,7 +8,7 @@ export default function Header() {
           target="_blank"
           rel="noreferrer"
       >
-      <img src="../logo.png" className="h-6 -ml-2 -mt-2 mr-1 inline" alt="logo icon" />
+      <Image src="/logo.png" className="-ml-2 -mt-2 mr-1 inline" alt="logo icon" width={22} height={22} />
         Routines AI
       </Link>
       <Link href="https://github.com/cortez/RoutinesAI" className="top-4 right-6 font-medium space-x-3 absolute hover:text-gray-600"

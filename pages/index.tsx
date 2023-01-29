@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import FrequencyDropDown, { FrequencyType } from "../components/FrequencyDropDown";
@@ -76,7 +77,7 @@ const Home: NextPage = () => {
 
           <div className="sm:max-w-md w-full sm:mt-32 mt-20">
             <div className="flex items-center space-x-3">
-              <img src="/frequency.svg" width={22} height="auto" alt="frequency icon" className="ml-1" />
+              <Image src="/frequency.svg" priority width={22} height={22} alt="frequency icon" className="ml-1" />
               <p className="font-normal text-left my-5">Amount of workouts per week:</p>
             </div>
             <div className="block">
@@ -84,7 +85,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex mt-10 items-center space-x-3 mt-10">
-              <img src="/equipment.svg" width={22} height="auto" alt="equipment icon" className="ml-1" />
+              <Image src="/equipment.svg" width={22} height={22} alt="equipment icon" className="ml-1" />
               <p className="font-normal text-left my-5">What equipment do you have access to?</p>
             </div>
             <div className="block">
@@ -92,10 +93,10 @@ const Home: NextPage = () => {
             </div>
 
             <div className="flex mt-10 items-center space-x-3">
-              <img
+              <Image
                 src="/goal.svg"
                 width={22}
-                height="auto"
+                height={22}
                 alt="goal icon"
                 className="sm:mb-0 ml-1"
               />
@@ -114,10 +115,10 @@ const Home: NextPage = () => {
             />
 
             <div className="flex mt-10 items-center space-x-3">
-              <img
+              <Image
                 src="/limitations.svg"
                 width={22}
-                height="auto"
+                height={22}
                 alt="limitations icon"
                 className="sm:mb-0 ml-1"
               />
@@ -144,10 +145,10 @@ const Home: NextPage = () => {
                 className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-lime-500"
                 onClick={(e) => generateWorkout(e)}
               >
-                <img
+                <Image
                   src="/magic.svg"
                   width={22}
-                  height="auto"
+                  height={22}
                   alt="magic icon"
                   className="inline mb-1 mr-2"
                 />
