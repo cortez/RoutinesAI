@@ -70,7 +70,7 @@ const Home: NextPage = () => {
 
         <Header />
         <main className="bg-white rounded-3xl flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-          <h1 className="sm:text-6xl text-3xl max-w-3xl font-bold text-gray-900 mt-20 sm:mt-28" data-aos="zoom-in">
+          <h1 className="sm:text-6xl text-3xl max-w-3xl font-bold text-black mt-20 sm:mt-28" data-aos="zoom-in">
             Generate your own personalized workout routine in seconds
           </h1>
 
@@ -174,7 +174,7 @@ const Home: NextPage = () => {
                 {generatedWorkouts && (
                   <>
                     <div>
-                      <h2 className="sm:text-4xl text-2xl font-bold text-gray-900 mx-auto mt-20">
+                      <h2 className="sm:text-4xl text-2xl font-bold text-black mx-auto mt-20">
                         Your generated workouts
                       </h2>
                     </div>
