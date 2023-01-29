@@ -77,30 +77,21 @@ const Home: NextPage = () => {
 
           <div className="sm:max-w-md w-full sm:mt-32 mt-20">
             <div className="flex items-center space-x-3">
-              <Image src="/frequency.svg" priority width={22} height={22} alt="frequency icon" className="ml-1" />
-              <p className="font-normal text-left my-5">Amount of workouts per week:</p>
+              <p className="font-normal text-left my-3 ml-1">Amount of workouts per week:</p>
             </div>
             <div className="block">
               <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
             </div>
 
             <div className="flex mt-10 items-center space-x-3 mt-10">
-              <Image src="/equipment.svg" width={22} height={22} alt="equipment icon" className="ml-1" />
-              <p className="font-normal text-left my-5">What equipment do you have access to?</p>
+              <p className="font-normal text-left my-3 ml-1">What equipment do you have access to?</p>
             </div>
             <div className="block">
               <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
             </div>
 
             <div className="flex mt-10 items-center space-x-3">
-              <Image
-                src="/goal.svg"
-                width={22}
-                height={22}
-                alt="goal icon"
-                className="sm:mb-0 ml-1"
-              />
-              <p className="font-normal text-left my-5">
+              <p className="font-normal text-left my-3 ml-1">
                 What is your main goal?
               </p>
             </div>
@@ -115,14 +106,7 @@ const Home: NextPage = () => {
             />
 
             <div className="flex mt-10 items-center space-x-3">
-              <Image
-                src="/limitations.svg"
-                width={22}
-                height={22}
-                alt="limitations icon"
-                className="sm:mb-0 ml-1"
-              />
-              <p className="font-normal text-left my-5">
+              <p className="font-normal text-left my-3 ml-1">
                 Name any limitations{" "}
                 <span className="text-gray-400">
                   (or leave blank)
