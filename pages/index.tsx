@@ -41,7 +41,6 @@ const Home: NextPage = () => {
       throw new Error(response.statusText);
     }
 
-    // This data is a ReadableStream
     const data = response.body;
     if (!data) {
       return;
@@ -62,148 +61,149 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex max-w-full mx-auto flex-col items-center justify-center py-2 min-h-screen bg-black">
-      <Head>
-        <title>Routines AI</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="rounded-3xl">
+      <div className="flex rounded-3xl max-w-full mx-auto flex-col items-center justify-center min-h-screen bg-white">
+        <Head>
+          <title>Routines AI</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <Header />
-      <main className="rounded-3xl bg-white flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-        <h1 className="sm:text-6xl text-3xl max-w-5xl font-bold text-gray-900 mt-20 sm:mt-28" data-aos="zoom-in">
-          Generate your own personalized workout routine in seconds
-        </h1>
+        <Header />
+        <main className="bg-white rounded-3xl flex flex-1 w-full flex-col items-center justify-center text-center px-4">
+          <h1 className="sm:text-6xl text-3xl max-w-3xl font-bold text-gray-900 mt-20 sm:mt-28" data-aos="zoom-in">
+            Generate your own personalized workout routine in seconds
+          </h1>
 
-        <div className="sm:max-w-md w-full mt-20">
+          <div className="sm:max-w-md w-full sm:mt-32 mt-20">
+            <div className="flex items-center space-x-3">
+              <img src="/frequency.svg" width={22} height="auto" alt="frequency icon" className="ml-1" />
+              <p className="font-normal text-left my-5">Amount of workouts per week:</p>
+            </div>
+            <div className="block">
+              <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
+            </div>
 
-          <div className="flex items-center space-x-3">
-            <img src="/frequency.svg" width={22} height="auto" alt="frequency icon" />
-            <p className="font-normal text-left my-5">Amount of workouts per week:</p>
-          </div>
-          <div className="block">
-            <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
-          </div>
+            <div className="flex mt-10 items-center space-x-3 mt-10">
+              <img src="/equipment.svg" width={22} height="auto" alt="equipment icon" className="ml-1" />
+              <p className="font-normal text-left my-5">What equipment do you have access to?</p>
+            </div>
+            <div className="block">
+              <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
+            </div>
 
-          <div className="flex mt-10 items-center space-x-3 mt-10 ">
-            <img src="/equipment.svg" width={22} height="auto" alt="equipment icon" />
-            <p className="font-normal text-left my-5">What equipment do you have access to?</p>
-          </div>
-          <div className="block">
-            <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
-          </div>
-
-          <div className="flex mt-10 items-center space-x-3">
-            <img
-              src="/goal.svg"
-              width={22}
-              height="auto"
-              alt="goal icon"
-              className="sm:mb-0"
-            />
-            <p className="font-normal text-left my-5">
-              What is your main goal?
-            </p>
-          </div>
-          <textarea
-            value={goal}
-            onChange={(e) => setGoal(e.target.value)}
-            rows={1}
-            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
-            placeholder={
-              "e.g. Lose Weight"
-            }
-          />
-
-          <div className="flex mt-10 items-center space-x-3">
-            <img
-              src="/limitations.svg"
-              width={22}
-              height="auto"
-              alt="limitations icon"
-              className="sm:mb-0"
-            />
-            <p className="font-normal text-left my-5">
-              Name any limitations{" "}
-              <span className="text-gray-400">
-                (or leave blank)
-              </span>
-              .
-            </p>
-          </div>
-          <textarea
-            value={limitations}
-            onChange={(e) => setLimitations(e.target.value)}
-            rows={1}
-            className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
-            placeholder={
-              "e.g. Sprained Ankle"
-            }
-          />
-
-          {!loading && (
-            <button
-              className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-black font-medium px-4 py-8 mt-16 w-full focus:outline-lime-500"
-              onClick={(e) => generateWorkout(e)}
-            >
+            <div className="flex mt-10 items-center space-x-3">
               <img
-                src="/magic.svg"
+                src="/goal.svg"
                 width={22}
                 height="auto"
-                alt="magic icon"
-                className="inline mb-1 mr-2"
+                alt="goal icon"
+                className="sm:mb-0 ml-1"
               />
-              Generate your workouts
-            </button>
-          )}
-          {loading && (
-            <button
-              className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-white font-medium px-4 py-8 sm:mt-7 mt-6 w-full focus:outline-lime-500"
-              disabled
-            >
-              <LoadingDots color="black" style="large" />
-            </button>
-          )}
-        </div>
-        <Toaster
-          position="bottom-right"
-          reverseOrder={false}
-          toastOptions={{ duration: 2000 }}
-        />
-        <hr className="h-px bg-gray-700" />
-          <AnimatePresence mode="wait">
-            <motion.div className="space-y-10 mb-4 sm:mb-28">
-              {generatedWorkouts && (
-                <>
-                  <div>
-                    <h2 className="sm:text-4xl text-2xl font-bold text-gray-900 mx-auto mt-20">
-                      Your generated workouts
-                    </h2>
-                  </div>
-                  <div className="space-y-4 flex flex-col items-center justify-center max-w-full mx-auto">
-                    {generatedWorkouts
-                      .split("Workout ")
-                      .splice(1)
-                      .map((generatedWorkout) => {
-                        return (
-                          <div
-                            className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-pointer"
-                            onClick={() => {
-                              navigator.clipboard.writeText(generatedWorkout);
-                              toast("Copied workout", {
-                              });
-                            }}
-                            key={generatedWorkout}
-                          >
-                            <p>{generatedWorkout}</p>
-                          </div>
-                        );
-                      })}
-                  </div>
-                </>
-              )}
-            </motion.div>
-          </AnimatePresence>
-      </main>
+              <p className="font-normal text-left my-5">
+                What is your main goal?
+              </p>
+            </div>
+            <textarea
+              value={goal}
+              onChange={(e) => setGoal(e.target.value)}
+              rows={1}
+              className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
+              placeholder={
+                "e.g. Lose Weight"
+              }
+            />
+
+            <div className="flex mt-10 items-center space-x-3">
+              <img
+                src="/limitations.svg"
+                width={22}
+                height="auto"
+                alt="limitations icon"
+                className="sm:mb-0 ml-1"
+              />
+              <p className="font-normal text-left my-5">
+                Name any limitations{" "}
+                <span className="text-gray-400">
+                  (or leave blank)
+                </span>
+                .
+              </p>
+            </div>
+            <textarea
+              value={limitations}
+              onChange={(e) => setLimitations(e.target.value)}
+              rows={1}
+              className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
+              placeholder={
+                "e.g. Sprained Ankle"
+              }
+            />
+
+            {!loading && (
+              <button
+                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-lime-500"
+                onClick={(e) => generateWorkout(e)}
+              >
+                <img
+                  src="/magic.svg"
+                  width={22}
+                  height="auto"
+                  alt="magic icon"
+                  className="inline mb-1 mr-2"
+                />
+                Generate your workouts
+              </button>
+            )}
+            {loading && (
+              <button
+                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-white font-medium px-4 py-8 sm:mt-7 mt-6 w-full focus:outline-lime-500"
+                disabled
+              >
+                <LoadingDots color="black" style="large" />
+              </button>
+            )}
+          </div>
+          <Toaster
+            position="bottom-right"
+            reverseOrder={false}
+            toastOptions={{ duration: 2000 }}
+          />
+          <hr className="h-px bg-gray-700" />
+            <AnimatePresence mode="wait">
+              <motion.div className="space-y-10 mb-4 sm:mb-28">
+                {generatedWorkouts && (
+                  <>
+                    <div>
+                      <h2 className="sm:text-4xl text-2xl font-bold text-gray-900 mx-auto mt-20">
+                        Your generated workouts
+                      </h2>
+                    </div>
+                    <div className="space-y-4 flex flex-col items-center justify-center max-w-full mx-auto">
+                      {generatedWorkouts
+                        .split("Workout ")
+                        .splice(1)
+                        .map((generatedWorkout) => {
+                          return (
+                            <div
+                              className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-pointer"
+                              onClick={() => {
+                                navigator.clipboard.writeText(generatedWorkout);
+                                toast("Copied workout", {
+                                });
+                              }}
+                              key={generatedWorkout}
+                            >
+                              <p>{generatedWorkout}</p>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  </>
+                )}
+              </motion.div>
+            </AnimatePresence>
+        </main>
+      </div>
       <Footer />
     </div>
   );
