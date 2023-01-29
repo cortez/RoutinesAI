@@ -126,7 +126,7 @@ const Home: NextPage = () => {
 
             {!loading && (
               <button
-                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-lime-500"
+                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-black font-medium px-4 py-8 sm:mt-7 mt-12 w-full focus:outline-lime-500"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-white font-medium px-4 py-8 sm:mt-7 mt-6 w-full focus:outline-lime-500"
+                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-white font-medium px-4 py-8 sm:mt-7 mt-12 w-full focus:outline-lime-500"
                 disabled
               >
                 <LoadingDots color="black" style="large" />
