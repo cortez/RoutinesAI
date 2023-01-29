@@ -46,7 +46,7 @@ export default function EquipmentDropDown({ equipment, setEquipment }: DropDownP
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className="absolute left-0 z-10 mt-2 w-full origin-top-right rounded-xl bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden"
+          className="absolute left-0 z-10 mt-2 w-full origin-top-right rounded-xl bg-white shadow-lg focus:outline-none overflow-hidden"
           key={equipment}
         >
           <div className="">
@@ -56,9 +56,8 @@ export default function EquipmentDropDown({ equipment, setEquipment }: DropDownP
                   <button
                   onClick={() => setEquipment(equipmentItem)}
                   className={classNames(
-                    active ? "bg-gray-200 text-gray-900" : "text-gray-700",
-                    equipment === equipmentItem ? "bg-gray-100" : "bg-gray-100",
-                    "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between",
+                    active ? "bg-lime-400 text-gray-900" : "text-gray-700 ",
+                    "px-4 py-3 text-sm w-full text-left flex items-center space-x-2 justify-between",
                   )}
                 >
                     <span>{equipmentItem}</span>
