@@ -57,7 +57,7 @@ export default function EquipmentDropDown({ equipment, setEquipment }: DropDownP
                   onClick={() => setEquipment(equipmentItem)}
                   className={classNames(
                     active ? "bg-lime-400 text-gray-900" : "text-gray-700 ",
-                    "px-4 py-3 text-sm w-full text-left flex items-center space-x-2 justify-between",
+                    "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between",
                   )}
                 >
                     <span>{equipmentItem}</span>
