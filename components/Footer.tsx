@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="text-center rounded-3xl bg-black w-full sm:mt-8 mt-12 sm:mb-6 mb-4 items-center text-white">
+    <footer className="text-center rounded-3xl bg-black w-full mt-8 sm:mb-6 mb-4 items-center text-white">
       <div>
         <a
           href="mailto:joseph@lcortez.com?subject=Routines%20AI%20Feedback"
