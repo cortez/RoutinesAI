@@ -17,7 +17,7 @@ export default function Footer() {
           href="https://openai.com/api"
           target="_blank"
           rel="noreferrer"
-          className="text-gray-600 hover:text-gray-500"
+          className="text-gray-600"
         >
           OpenAI
         </a>{" "}
@@ -26,7 +26,7 @@ export default function Footer() {
           href="https://vercel.com/features/edge-functions"
           target="_blank"
           rel="noreferrer"
-          className="text-gray-600 hover:text-gray-500"
+          className="text-gray-600"
         >
           Vercel Edge Functions
         </a>

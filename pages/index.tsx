@@ -71,7 +71,10 @@ const Home: NextPage = () => {
 
         <Header />
         <main className="bg-white rounded-3xl flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-          <h1 className="sm:text-6xl text-3xl max-w-3xl font-bold text-black mt-16 sm:mt-28" data-aos="zoom-in">
+          <div>
+            <img src="./hero.svg" className="absolute sm:mt-16 mt-8 left-0" />
+          </div>
+          <h1 className="z-10 sm:text-6xl text-3xl max-w-3xl font-bold text-black mt-16 sm:mt-28" data-aos="zoom-in">
             Generate your own personalized workout routine in seconds
           </h1>
 
@@ -126,7 +129,7 @@ const Home: NextPage = () => {
 
             {!loading && (
               <button
-                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-lime-500"
+                className="bg-lime-400 hover:scale-95 transition font-medium rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -141,8 +144,7 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="font-medium bg-lime-400 hover:bg-lime-500 rounded-xl text-white font-medium px-4 py-8 mt-12 w-full focus:outline-lime-500"
-                disabled
+                className="bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-500 to-sky-800 background-animate rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black" disabled
               >
                 <LoadingDots color="black" style="large" />
               </button>
