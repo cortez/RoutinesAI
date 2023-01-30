@@ -72,7 +72,7 @@ const Home: NextPage = () => {
         <Header />
         <main className="bg-white rounded-3xl flex flex-1 w-full flex-col items-center justify-center text-center px-4">
           <div>
-            <img src="./hero.svg" className="sm:block hidden absolute sm:mt-16 mt-8 left-0" />
+            <img src="./hero.svg" className="w-full sm:block hidden absolute mt-16 left-0" />
           </div>
           <h1 className="z-10 sm:text-6xl text-3xl max-w-3xl font-bold text-black mt-16 sm:mt-28" data-aos="zoom-in">
             Generate your own personalized workout routine in seconds
