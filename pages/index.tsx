@@ -129,7 +129,7 @@ const Home: NextPage = () => {
 
             {!loading && (
               <button
-                className="bg-lime-400 hover:scale-95 transition font-medium rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black"
+                className="bg-gradient-to-r from-lime-400 to-green-400 hover:from-lime-500 hover:to-green-500 background-animate active:scale-95 transition font-medium rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -144,7 +144,7 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-500 to-sky-800 background-animate rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black" disabled
+                className="bg-gradient-to-r from-lime-400 to-amber-400 background-animate rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black" disabled
               >
                 <LoadingDots color="black" style="large" />
               </button>
