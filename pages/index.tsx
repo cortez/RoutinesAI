@@ -128,8 +128,13 @@ const Home: NextPage = () => {
             />
 
             {!loading && (
+              <>
               <button
-                className="bg-gradient-to-r from-lime-400 to-green-400 hover:from-lime-500 hover:to-green-500 background-animate active:scale-95 transition font-medium rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black"
+                className="bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-medium rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black
+                select-none sm-mb:0 mb-2
+              hover:translate-y-2  hover:[box-shadow:0_0px_0_0_#84CC16]
+              hover:border-b-[0px]
+              transition-all duration-150 [box-shadow:0_10px_0_0_#84CC16]"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -141,10 +146,14 @@ const Home: NextPage = () => {
                 />
                 Generate your workouts
               </button>
+
+              </>
             )}
             {loading && (
               <button
-                className="bg-gradient-to-r from-lime-400 to-amber-400 background-animate rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black" disabled
+                className="bg-gradient-to-r from-lime-400 to-teal-400 background-animate rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black
+                select-none sm-mb:0 mb-2
+              transition-all duration-150 [box-shadow:0_10px_0_0_#ffffff]" disabled
               >
                 <LoadingDots color="black" style="large" />
               </button>
