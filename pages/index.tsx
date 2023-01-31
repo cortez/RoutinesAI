@@ -157,13 +157,16 @@ const Home: NextPage = () => {
           />
           <hr className="h-px bg-gray-700" />
             <AnimatePresence mode="wait">
-              <motion.div className="space-y-7 sm:space-y-10 mb-4 sm:mb-28">
+              <motion.div className="space-y-8 sm:space-y-10 mb-4 sm:mb-28">
                 {generatedWorkouts && (
                   <>
                     <div>
                       <h2 className="sm:text-4xl text-2xl font-bold text-black mx-auto mt-20">
                         Your generated workouts
                       </h2>
+                      <h3 className="sm:mt-3 mt-1 text-gray-400">
+                        (Aim to complete multiple sets for each day)
+                      </h3>
                     </div>
                     <div className="space-y-4 flex flex-col items-center justify-center max-w-full mx-auto">
                       {generatedWorkouts
