@@ -60,7 +60,7 @@ const Home: NextPage = () => {
 
     setLoading(false);
   };
-
+  
   return (
     <div className="rounded-3xl">
       <div className="flex rounded-3xl max-w-full mx-auto flex-col items-center justify-center min-h-screen bg-white">
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
               value={limitations}
               onChange={(e) => setLimitations(e.target.value)}
               rows={1}
-              className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
+              className="resize-none mb-12 w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
               placeholder={
                 "e.g. Sprained Ankle"
               }
@@ -130,11 +130,7 @@ const Home: NextPage = () => {
             {!loading && (
               <>
               <button
-                className="bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-medium rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black
-                select-none sm-mb:0 mb-2
-              hover:translate-y-2  hover:[box-shadow:0_0px_0_0_#84CC16]
-              hover:border-b-[0px]
-              transition-all duration-150 [box-shadow:0_10px_0_0_#84CC16]"
+                className="bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-medium rounded-xl text-black font-medium px-4 py-8 mb-2 w-full focus:outline-black select-none hover:translate-y-2 hover:[box-shadow:0_0px_0_0_#84CC16] hover:border-b-[0px] transition-all duration-150 [box-shadow:0_9px_0_0_#84CC16]"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -151,16 +147,14 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="bg-gradient-to-r from-lime-400 to-teal-400 background-animate rounded-xl text-black font-medium px-4 py-8 mt-12 w-full focus:outline-black
-                select-none sm-mb:0 mb-2
-              transition-all duration-150 [box-shadow:0_10px_0_0_#ffffff]" disabled
+                className="loading-button bg-gradient-to-r from-lime-400 to-teal-400 background-animate font-medium rounded-xl text-black font-medium px-4 py-8 w-full focus:outline-black select-none sm-mb:0 mb-2 cursor-no-drop"
               >
                 <LoadingDots color="black" style="large" />
               </button>
             )}
           </div>
           <Toaster
-            position="bottom-right"
+            position="top-center"
             reverseOrder={false}
             toastOptions={{ duration: 2000 }}
           />
@@ -182,6 +176,7 @@ const Home: NextPage = () => {
                         .split("Workout ")
                         .splice(1)
                         .map((generatedWorkout) => {
+                          
                           return (
                             <div
                               className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-pointer"
