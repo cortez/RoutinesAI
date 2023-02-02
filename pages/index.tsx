@@ -145,7 +145,7 @@ const Home: NextPage = () => {
           />
           <hr className="h-px bg-gray-700" />
             <AnimatePresence mode="wait">
-              <motion.div className="space-y-8 sm:space-y-10 sm:mb-28 mb-20">
+              <motion.div className="space-y-8 sm:space-y-10 sm:mb-28 mb-16">
                 {generatedWorkouts && (
                   <>
                     <div>
