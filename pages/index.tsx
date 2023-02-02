@@ -70,9 +70,6 @@ const Home: NextPage = () => {
         </Head>
         <Header />
         <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-          <div className="sm:block hidden">
-            <img src="./hero.svg" className="w-full md:block hidden absolute 2xl:-mt-56 md:-mt-32 opacity-50 left-0" />
-          </div>
           
           <div className="mt-4 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
             
