@@ -114,13 +114,13 @@ const Home: NextPage = () => {
             {!loading && (
               <>
               <button
-                className="sm:mb-3 mb-2 mt-1 bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-semibold rounded-xl text-black font-medium px-12 py-5 w-xl focus:outline-black select-none hover:translate-y-1.5 hover:[box-shadow:0_0px_0_0_#84CC16] hover:border-b-[0px] transition-all duration-150 [box-shadow:0_6px_0_0_#84CC16]"
+                className="sm:mb-3 mb-2 mt-2 bg-black font-semibold rounded-xl text-white font-medium px-8 py-4 w-xl focus:outline-black select-none hover:scale-95 active:scale-90 transition"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
                   src="/magic.svg"
-                  width={18}
-                  height={18}
+                  width={17}
+                  height={17}
                   alt="magic icon"
                   className="inline mb-1 mr-2"
                 />
@@ -131,9 +131,9 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="sm:mb-3 mb-2 loading-button bg-gradient-to-r from-lime-400 to-teal-400 background-animate font-medium rounded-xl text-black font-medium px-20 py-5 w-xl focus:outline-black select-none sm-mb:0 cursor-no-drop"
+                className="transition sm:mb-3 mb-0 loading-button bg-gradient-to-r from-sky-400 to-blue-500 background-animate font-medium rounded-xl font-medium px-16 py-4 w-xl focus:outline-black select-none cursor-no-drop"
               >
-                &nbsp;<LoadingDots color="black" style="large" />&nbsp;
+                &nbsp;<LoadingDots color="white" style="large" />&nbsp;
               </button>
             )}
           

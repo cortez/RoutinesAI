@@ -9,7 +9,7 @@ export default function Header() {
       >
         Routines AI
       </Link>
-      <span className="scale-90 uppercase text-sm font-semibold px-2 py-1 text-lime-500 bg-lime-100 rounded-xl -ml-10 absolute">
+      <span className="scale-90 uppercase text-sm font-bold px-2 py-1 text-sky-400 bg-sky-100 rounded-xl -ml-10 absolute">
         Workouts in seconds
       </span>
     </header>
