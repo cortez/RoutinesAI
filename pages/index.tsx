@@ -70,7 +70,7 @@ const Home: NextPage = () => {
         <Header />
         <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4">
           
-          <div className="mt-10 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
+          <div className="mt-12 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
             
             <div className="mt-12">
               <p className="text-left xl:my-3 my-2 ml-1">How many workouts per week?</p>
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             {!loading && (
               <>
               <button
-                className="sm:mb-3 mb-2 mt-2 bg-black font-semibold rounded-xl text-white font-medium px-8 py-4 w-xl focus:outline-black select-none hover:scale-95 active:scale-90 transition"
+                className="xl:mb-2 sm:mb-0 mb-2 mt-2 bg-black font-semibold rounded-xl text-white font-medium px-8 py-4 w-xl focus:outline-black select-none hover:scale-95 active:scale-90 transition"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="transition sm:mb-3 mb-0 loading-button bg-gradient-to-r from-sky-400 to-blue-500 background-animate font-medium rounded-xl font-medium px-16 py-4 w-xl focus:outline-black select-none cursor-no-drop"
+                className="transition xl:mb-2 sm:mb-0 mb-0 loading-button bg-gradient-to-r from-sky-400 to-blue-500 background-animate font-medium rounded-xl font-medium px-16 py-4 w-xl focus:outline-black select-none cursor-no-drop"
               >
                 &nbsp;<LoadingDots color="white" style="large" />&nbsp;
               </button>
