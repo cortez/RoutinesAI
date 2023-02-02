@@ -62,7 +62,7 @@ const Home: NextPage = () => {
   };
   
   return (
-    <div className="">
+    <>
       <div className="bg-white flexmax-w-full mx-auto flex-col items-center justify-center">
         <Head>
           <title>Routines AI</title>
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
         <Header />
         <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4">
           <div className="sm:block hidden">
-            <img src="./hero.svg" className="w-full sm:block hidden absolute -mt-36 opacity-50 left-0" />
+            <img src="./hero.svg" className="w-full md:block hidden absolute 2xl:-mt-56 md:-mt-32 opacity-50 left-0" />
           </div>
           
           <div className="mt-4 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
@@ -185,7 +185,7 @@ const Home: NextPage = () => {
             </AnimatePresence>
         </main>
       </div>
-    </div>
+    </>
   );
 };
 export default Home;
