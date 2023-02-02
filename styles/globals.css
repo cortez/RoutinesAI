@@ -14,20 +14,11 @@
 		font-weight: 500;
 		font-display: swap;
 	}
-	@font-face {
-		font-family: "clash";
-		src: url("https://cortez.link/fonts/ClashDisplay/ClashDisplay-Semibold.ttf");
-		font-display: swap;
-	}
 }
 
 * {
     font-family: "satoshi";
 	font-weight: 400;
-}
-
-h1 {
-	font-family: "clash";
 }
 
 .loading-button {

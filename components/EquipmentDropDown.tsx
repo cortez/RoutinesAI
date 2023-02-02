@@ -23,7 +23,7 @@ export default function EquipmentDropDown({ equipment, setEquipment }: DropDownP
   return (
     <Menu as="div" className="relative block text-left w-full">
       <div>
-        <Menu.Button className="inline-flex w-full justify-between items-center rounded-xl bg-gray-100 px-4 py-2 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 ring-gray-100 focus:ring-lime-400">
+        <Menu.Button className="inline-flex w-full justify-between items-center rounded-xl bg-gray-100 px-4 py-2 text-black hover:bg-gray-200 focus:outline-none focus:ring-2 ring-gray-100 focus:ring-black">
           {equipment}
           <ChevronDownIcon
             className="-mr-1 ml-2 h-5 w-5 ui-open:hidden"
@@ -56,7 +56,7 @@ export default function EquipmentDropDown({ equipment, setEquipment }: DropDownP
                   <button
                   onClick={() => setEquipment(equipmentItem)}
                   className={classNames(
-                    active ? "bg-lime-400 text-gray-900" : "text-gray-700 ",
+                    active ? "bg-gray-200 text-black" : "text-black ",
                     "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between",
                   )}
                 >

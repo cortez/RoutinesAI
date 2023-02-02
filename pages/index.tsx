@@ -62,75 +62,63 @@ const Home: NextPage = () => {
   };
   
   return (
-    <div className="rounded-3xl">
-      <div className="flex rounded-3xl max-w-full mx-auto flex-col items-center justify-center min-h-screen bg-white">
+    <div className="">
+      <div className="bg-white flexmax-w-full mx-auto flex-col items-center justify-center">
         <Head>
           <title>Routines AI</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-
         <Header />
-        <main className="bg-white rounded-3xl flex flex-1 w-full flex-col items-center justify-center text-center px-4">
-          <div>
-            <img src="./hero.svg" className="w-full sm:block hidden absolute mt-16 left-0" />
+        <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4">
+          <div className="sm:block hidden">
+            <img src="./hero.svg" className="w-full sm:block hidden absolute -mt-36 opacity-50 left-0" />
           </div>
-          <h1 className="z-10 sm:text-6xl text-3xl max-w-3xl font-bold text-black mt-16 sm:mt-28" data-aos="zoom-in">
-            Generate your own personalized workout routine in seconds
-          </h1>
-
-          <div className="sm:max-w-md w-full sm:mt-32 mt-20">
-            <div className="flex items-center space-x-3">
-              <p className="font-normal text-left my-3 ml-1">Amount of workouts per week:</p>
-            </div>
-            <div className="block">
+          
+          <div className="mt-4 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
+            
+            <div className="mt-12">
+              <p className="text-left my-2 ml-1">How many workouts per week?</p>
               <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
             </div>
 
-            <div className="flex mt-10 items-center space-x-3 mt-10">
-              <p className="font-normal text-left my-3 ml-1">What equipment do you have access to?</p>
-            </div>
-            <div className="block">
+            <div className="mt-12">
+              <p className="text-left my-2 ml-1">What equipment do you have access to?</p>
               <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
             </div>
 
-            <div className="flex mt-10 items-center space-x-3">
-              <p className="font-normal text-left my-3 ml-1">
-                What is your main goal?
-              </p>
+            <div className="mt-12">
+              <p className="text-left my-2 ml-1">What is your main goal?</p>
+              <textarea
+                value={goal}
+                onChange={(e) => setGoal(e.target.value)}
+                rows={1}
+                className="resize-none placeholder-gray-400 w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-black focus:ring-black"
+                placeholder={
+                  "e.g. Lose Weight"
+                }
+              />
             </div>
-            <textarea
-              value={goal}
-              onChange={(e) => setGoal(e.target.value)}
-              rows={1}
-              className="resize-none w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
-              placeholder={
-                "e.g. Lose Weight"
-              }
-            />
 
-            <div className="flex mt-10 items-center space-x-3">
-              <p className="font-normal text-left my-3 ml-1">
-                Name any limitations{" "}
-                <span className="text-gray-400">
-                  (or leave blank)
-                </span>
-                .
+            <div className="mt-12">
+              <p className="text-left my-2 ml-1">
+                Name any limitations or leave blank.
               </p>
+              <textarea
+                value={limitations}
+                onChange={(e) => setLimitations(e.target.value)}
+                rows={1}
+                className="resize-none sm:mb-14 mb-16 placeholder-gray-400 w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-black focus:ring-black"
+                placeholder={
+                  "e.g. Sprained Ankle"
+                }
+              />
             </div>
-            <textarea
-              value={limitations}
-              onChange={(e) => setLimitations(e.target.value)}
-              rows={1}
-              className="resize-none mb-12 w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-lime-400 focus:ring-lime-400"
-              placeholder={
-                "e.g. Sprained Ankle"
-              }
-            />
+          </div>
 
             {!loading && (
               <>
               <button
-                className="bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-medium rounded-xl text-black font-medium px-4 py-8 mb-2 w-full focus:outline-black select-none hover:translate-y-2 hover:[box-shadow:0_0px_0_0_#84CC16] hover:border-b-[0px] transition-all duration-150 [box-shadow:0_9px_0_0_#84CC16]"
+                className="sm:mb-3 mb-6 mt-1 bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-medium rounded-xl text-black font-medium px-6 py-4 w-xl focus:outline-black select-none hover:translate-y-1.5 hover:[box-shadow:0_0px_0_0_#84CC16] hover:border-b-[0px] transition-all duration-150 [box-shadow:0_6px_0_0_#84CC16]"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -140,19 +128,19 @@ const Home: NextPage = () => {
                   alt="magic icon"
                   className="inline mb-1 mr-2"
                 />
-                Generate your workouts
+                Generate
               </button>
 
               </>
             )}
             {loading && (
               <button
-                className="loading-button bg-gradient-to-r from-lime-400 to-teal-400 background-animate font-medium rounded-xl text-black font-medium px-4 py-8 w-full focus:outline-black select-none sm-mb:0 mb-2 cursor-no-drop"
+                className="sm:mb-3 mb-6 loading-button bg-gradient-to-r from-lime-400 to-teal-400 background-animate font-medium rounded-xl text-black font-medium px-14 py-4 w-xl focus:outline-black select-none sm-mb:0 cursor-no-drop"
               >
-                <LoadingDots color="black" style="large" />
+                &nbsp;<LoadingDots color="black" style="large" />&nbsp;
               </button>
             )}
-          </div>
+          
           <Toaster
             position="top-center"
             reverseOrder={false}
@@ -160,25 +148,25 @@ const Home: NextPage = () => {
           />
           <hr className="h-px bg-gray-700" />
             <AnimatePresence mode="wait">
-              <motion.div className="space-y-8 sm:space-y-10 mb-4 sm:mb-28">
+              <motion.div className="space-y-8 sm:space-y-10 sm:mb-28 mb-20">
                 {generatedWorkouts && (
                   <>
                     <div>
-                      <h2 className="sm:text-4xl text-2xl font-bold text-black mx-auto mt-20">
+                      <h1 className="text-2xl font-bold text-black mx-auto mt-14">
                         Your generated workouts
-                      </h2>
-                      <h3 className="sm:mt-3 mt-1 text-gray-400">
+                      </h1>
+                      <h3 className="mt-1 text-gray-400">
                         (Aim to complete multiple sets for each day)
                       </h3>
                     </div>
-                    <div className="space-y-4 flex flex-col items-center justify-center max-w-full mx-auto">
+                    <div className="space-y-4 flex flex-col items-center justify-center max-w-lg mx-auto">
                       {generatedWorkouts
                         .split("Workout ")
                         .splice(1)
                         .map((generatedWorkout) => {
                           return (
                             <div
-                              className="bg-gray-100 rounded-xl p-4 hover:bg-gray-200 transition cursor-pointer"
+                              className="bg-gray-100 hover:bg-gray-200 rounded-xl p-4 transition cursor-pointer"
                               onClick={() => {
                                 navigator.clipboard.writeText(generatedWorkout);
                                 toast("Copied workout", {
@@ -197,7 +185,6 @@ const Home: NextPage = () => {
             </AnimatePresence>
         </main>
       </div>
-      <Footer />
     </div>
   );
 };
