@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             {!loading && (
               <>
               <button
-                className="sm:mb-3 mb-2 mt-1 bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-medium rounded-xl text-black font-medium px-12 py-5 w-xl focus:outline-black select-none hover:translate-y-1.5 hover:[box-shadow:0_0px_0_0_#84CC16] hover:border-b-[0px] transition-all duration-150 [box-shadow:0_6px_0_0_#84CC16]"
+                className="sm:mb-3 mt-1 bg-gradient-to-r from-lime-400 to-lime-300 background-animate font-medium rounded-xl text-black font-medium px-12 py-5 w-xl focus:outline-black select-none hover:translate-y-1.5 hover:[box-shadow:0_0px_0_0_#84CC16] hover:border-b-[0px] transition-all duration-150 [box-shadow:0_6px_0_0_#84CC16]"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="sm:mb-3 mb-2 loading-button bg-gradient-to-r from-lime-400 to-teal-400 background-animate font-medium rounded-xl text-black font-medium px-20 py-5 w-xl focus:outline-black select-none sm-mb:0 cursor-no-drop"
+                className="sm:mb-3 loading-button bg-gradient-to-r from-lime-400 to-teal-400 background-animate font-medium rounded-xl text-black font-medium px-20 py-5 w-xl focus:outline-black select-none sm-mb:0 cursor-no-drop"
               >
                 &nbsp;<LoadingDots color="black" style="large" />&nbsp;
               </button>
