@@ -151,9 +151,9 @@ const Home: NextPage = () => {
                       <h1 className="text-2xl font-semibold text-black mx-auto sm:mt-14 mt-16">
                         Your generated workouts
                       </h1>
-                      <h3 className="mt-1 text-gray-400 font-normal">
+                      {/* <h3 className="mt-1 text-gray-400 font-normal">
                         (Aim to complete multiple sets for each day)
-                      </h3>
+                      </h3> */}
                     </div>
                     <div className="space-y-4 flex flex-col items-center justify-center max-w-lg mx-auto">
                       {generatedWorkouts
