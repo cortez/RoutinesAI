@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                 value={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 rows={1}
-                className="font-normal resize-none placeholder-gray-400 w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-black focus:ring-black"
+                className="font-normal resize-none placeholder-gray-400 w-full rounded-xl border-2 border-gray-100 focus:border-black focus:ring-white"
                 placeholder={
                   "e.g. Lose Weight"
                 }
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
                 value={limitations}
                 onChange={(e) => setLimitations(e.target.value)}
                 rows={1}
-                className="font-normal resize-none sm:mb-14 mb-16 placeholder-gray-400 w-full rounded-xl bg-gray-100 hover:bg-gray-200 border-gray-100 focus:border-black focus:ring-black"
+                className="font-normal resize-none sm:mb-10 mb-16 placeholder-gray-400 w-full rounded-xl border-2 border-gray-100 focus:border-black focus:ring-white"
                 placeholder={
                   "e.g. Sprained Ankle"
                 }
