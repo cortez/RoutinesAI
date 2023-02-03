@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sm:mt-4 sm:ml-4 mt-3 ml-3 px-3 py-1.5 bg-white text-black text-left">
+    <header className="sm:mt-4 sm:ml-4 mt-8 ml-3 px-3 py-1.5 bg-white text-black text-left">
       <Link href="/" className="sm:font-semibold font-bold sm:text-lg text-3xl absolute focus:outline-black"
           target="_blank"
           rel="noreferrer"
