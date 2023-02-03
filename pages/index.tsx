@@ -72,17 +72,17 @@ const Home: NextPage = () => {
           
           <div className="mt-12 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
             
-            <div className="mt-12">
+            <div className="mt-12 -mb-1">
               <p className="text-left xl:my-3 my-2 ml-1">How many workouts per week?</p>
               <FrequencyDropDown frequency={frequency} setFrequency={(newFrequency) => setFrequency(newFrequency)} />
             </div>
 
-            <div className="mt-12">
+            <div className="mt-12 -mb-1">
               <p className="text-left xl:my-3 my-2 ml-1">What equipment do you have access to?</p>
               <EquipmentDropDown equipment={equipment} setEquipment={(newEquipment) => setEquipment(newEquipment)} />
             </div>
 
-            <div className="mt-12">
+            <div className="mt-12 -mb-1">
               <p className="text-left xl:my-3 my-2 ml-1">What is your main goal?</p>
               <textarea
                 value={goal}
@@ -95,7 +95,7 @@ const Home: NextPage = () => {
               />
             </div>
 
-            <div className="mt-12">
+            <div className="mt-12 -mb-1">
               <p className="text-left xl:my-3 my-2 ml-1">
                 Name any limitations or leave blank.
               </p>
