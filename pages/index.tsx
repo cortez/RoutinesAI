@@ -103,7 +103,7 @@ const Home: NextPage = () => {
                 value={limitations}
                 onChange={(e) => setLimitations(e.target.value)}
                 rows={1}
-                className="font-normal resize-none xl:mb-12 mb-10 placeholder-gray-400 w-full rounded-xl border-2 border-gray-100 focus:border-black focus:ring-white"
+                className="font-normal resize-none mb-10 placeholder-gray-400 w-full rounded-xl border-2 border-gray-100 focus:border-black focus:ring-white"
                 placeholder={
                   "e.g. Sprained Ankle"
                 }
