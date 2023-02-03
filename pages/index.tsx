@@ -70,7 +70,7 @@ const Home: NextPage = () => {
         <Header />
         <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4">
           
-          <div className="2xl:mt-32 sm:mt-24 mt-10 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
+          <div className="2xl:mt-36 sm:mt-24 mt-10 sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full">
             
             <div className="mt-12 -mb-1">
               <p className="text-left xl:my-3 my-2 ml-1">How many workouts/week do you want to do?</p>
