@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                 value={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 rows={1}
-                className="font-normal resize-none placeholder-gray-400 w-full rounded-xl border-2 border-gray-100 focus:border-black focus:ring-white"
+                className="font-normal resize-none placeholder-gray-400 w-full rounded-lg border-2 border-gray-100 focus:border-black focus:ring-white"
                 placeholder={
                   "e.g. Lose Weight"
                 }
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
                 value={limitations}
                 onChange={(e) => setLimitations(e.target.value)}
                 rows={1}
-                className="font-normal resize-none 2xl:mb-14 mb-10 placeholder-gray-400 w-full rounded-xl border-2 border-gray-100 focus:border-black focus:ring-white"
+                className="font-normal resize-none 2xl:mb-14 mb-10 placeholder-gray-400 w-full rounded-lg border-2 border-gray-100 focus:border-black focus:ring-white"
                 placeholder={
                   "e.g. Sprained Ankle"
                 }
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             {!loading && (
               <>
               <button
-                className="xl:mb-2 sm:mb-0 mb-2 mt-2 bg-black font-semibold rounded-xl text-white font-medium px-8 py-4 w-xl focus:outline-black select-none hover:scale-95 active:scale-90 transition"
+                className="xl:mb-2 sm:mb-0 mb-2 mt-2 bg-black font-semibold rounded-lg text-white font-medium px-6 py-3 w-xl focus:outline-black select-none hover:scale-95 active:scale-90 transition"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image
@@ -122,7 +122,7 @@ const Home: NextPage = () => {
                   width={17}
                   height={17}
                   alt="magic icon"
-                  className="inline mb-1 mr-2"
+                  className="inline mb-1 -ml-1 mr-2"
                 />
                 Generate
               </button>
@@ -131,9 +131,9 @@ const Home: NextPage = () => {
             )}
             {loading && (
               <button
-                className="transition xl:mb-2 sm:mb-0 mb-0 loading-button bg-gradient-to-r from-sky-400 to-blue-500 background-animate font-medium rounded-xl font-medium px-16 py-4 w-xl focus:outline-black select-none cursor-no-drop"
+                className="transition xl:mb-2 sm:mb-0 mb-0 loading-button bg-gradient-to-r from-sky-400 to-blue-500 background-animate font-medium rounded-lg font-medium px-14 py-3 w-xl focus:outline-black select-none cursor-no-drop"
               >
-                &nbsp;<LoadingDots color="white" style="large" />&nbsp;
+                <LoadingDots color="white" style="large" />
               </button>
             )}
           
@@ -162,7 +162,7 @@ const Home: NextPage = () => {
                         .map((generatedWorkout) => {
                           return (
                             <div
-                              className="bg-gray-100 hover:bg-gray-200 rounded-xl p-4 transition cursor-pointer"
+                              className="bg-gray-100 hover:bg-gray-200 rounded-lg p-4 transition cursor-pointer"
                               onClick={() => {
                                 navigator.clipboard.writeText(generatedWorkout);
                                 toast("Copied workout", {

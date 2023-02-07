@@ -23,7 +23,7 @@ export default function FrequencyDropDown({ frequency, setFrequency }: DropDownP
   return (
     <Menu as="div" className="relative block text-left w-full">
       <div>
-        <Menu.Button className="inline-flex w-full justify-between items-center rounded-xl px-4 py-2 font-normal text-black border-2 border-gray-100 outline-none focus:outline-none focus:border-black">
+        <Menu.Button className="inline-flex w-full justify-between items-center rounded-lg px-4 py-2 font-normal text-black border-2 border-gray-100 outline-none focus:outline-none focus:border-black">
           {frequency}
           <ChevronDownIcon
             className="-mr-1 ml-2 h-5 w-5 ui-open:hidden"
@@ -46,7 +46,7 @@ export default function FrequencyDropDown({ frequency, setFrequency }: DropDownP
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className="font-normal absolute left-0 z-10 mt-2 w-full origin-top-right rounded-xl bg-white shadow-md focus:outline-none overflow-hidden"
+          className="font-normal absolute left-0 z-10 mt-2 w-full origin-top-right rounded-lg bg-white shadow-md focus:outline-none overflow-hidden"
           key={frequency}
         >
           <div className="">

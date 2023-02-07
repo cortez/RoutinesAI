@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: "ibm-plex-sans";
+	src: url("https://cortez.link/fonts/IBM-Plex-Sans/IBMPlexSans-Regular.ttf");
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "ibm-plex-sans";
+	src: url("https://cortez.link/fonts/IBM-Plex-Sans/IBMPlexSans-Medium.ttf");
+	font-weight: 600;
+	font-display: swap;
+}
+
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 100%;
-  font-weight: 500;
-  font-display: swap;
+  font-family: "ibm-plex-sans";
 }
 
 .loading-button {
