@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             {!loading && (
               <>
               <button
-                className="xl:mb-2 sm:mb-0 mb-2 mt-2 bg-black font-semibold rounded-lg text-white font-medium px-6 py-3 w-xl focus:outline-black select-none hover:scale-95 active:scale-90 transition"
+                className="xl:mb-2 sm:mb-0 mb-2 mt-2 bg-black font-semibold rounded-lg text-white font-medium px-6 py-3 w-xl focus:outline-black select-none active:scale-95 transition"
                 onClick={(e) => generateWorkout(e)}
               >
                 <Image

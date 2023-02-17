@@ -14,7 +14,7 @@ export default function Header() {
           Workouts in seconds
         </span>
       </div>
-      <Link href="https://github.com/cortez/RoutinesAI" className="sm:block hidden font-medium text-md absolute top-4 right-4 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 hover:scale-95 active:scale-90 transition rounded-lg focus:outline-black"
+      <Link href="https://github.com/cortez/RoutinesAI" className="sm:block hidden font-medium text-md absolute top-4 right-4 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 active:scale-95 transition rounded-lg focus:outline-black"
           target="_blank"
           rel="noreferrer"
       >
