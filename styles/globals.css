@@ -18,6 +18,8 @@
 
 * {
   font-family: "ibm-plex-sans";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .loading-button {
