@@ -22,6 +22,10 @@
   text-rendering: optimizeLegibility;
 }
 
+a, .mobile-text {
+  font-weight: 600 !important;
+}
+
 .loading-button {
 	margin: 10px 0 -1px 0;
 }

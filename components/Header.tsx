@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="mt-4 sm:ml-4 ml-3 px-3 py-1.5 bg-white text-black text-left">
-      <Link href="/" className="sm:font-medium font-bold sm:text-lg text-3xl absolute focus:outline-black"
+      <Link href="/" className="sm:font-medium sm:text-lg text-3xl absolute focus:outline-black"
           target="_blank"
           rel="noreferrer"
       >
         Routines AI
       </Link>
-      <div className="sm:hidden block">
-        <span className="scale-75 right-0 mt-0.5 uppercase text-md font-bold px-2.5 py-1 text-sky-400 bg-sky-100 rounded-lg absolute">
+      <div className="sm:hidden block mobile-text">
+        <span className="scale-75 right-0 mt-0.5 uppercase text-md px-2.5 py-1 text-sky-400 bg-sky-100 rounded-lg absolute">
           Workouts in seconds
         </span>
       </div>
