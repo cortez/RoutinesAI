@@ -17,7 +17,7 @@
 }
 
 * {
-  font-family: "ibm-plex-sans";
+  font-family: "ibm-plex-sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
