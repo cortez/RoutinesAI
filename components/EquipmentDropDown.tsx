@@ -10,14 +10,14 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export type EquipmentType = "Any Equipment" | "Dumbbells Only" | "Pull-up Bar" | "Resistance Bands" | "No Equipment";
+export type EquipmentType = "Any Equipment" | "Dumbbells Only" | "Pull-up Bar" | "Ballet Barre" | "Resistance Bands" | "No Equipment";
 
 interface DropDownProps {
   equipment: EquipmentType;
   setEquipment: (equipment: EquipmentType) => void;
 }
 
-let frequencies: EquipmentType[] = ["Any Equipment", "Dumbbells Only", "Pull-up Bar", "Resistance Bands", "No Equipment"];
+let frequencies: EquipmentType[] = ["Any Equipment", "Dumbbells Only", "Pull-up Bar", "Ballet Barre", "Resistance Bands", "No Equipment"];
 
 export default function EquipmentDropDown({ equipment, setEquipment }: DropDownProps) {
   return (
