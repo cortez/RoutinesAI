@@ -1,23 +1,21 @@
-import { Menu, Transition } from "@headlessui/react";
-import {
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-} from "@heroicons/react/20/solid";
-import { Fragment } from "react";
+import { Fragment } from "react"
+
+import { Menu, Transition } from '@headlessui/react'
+
+import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(" ")
 }
 
-export type EquipmentType = "Any Equipment" | "Dumbbells Only" | "Pull-up Bar" | "Ballet Barre" | "Resistance Bands" | "No Equipment";
+export type EquipmentType = "Any Equipment" | "Dumbbells Only" | "Pull-up Bar" | "Ballet Barre" | "Resistance Bands" | "No Equipment"
 
 interface DropDownProps {
-  equipment: EquipmentType;
-  setEquipment: (equipment: EquipmentType) => void;
+  equipment: EquipmentType
+  setEquipment: (equipment: EquipmentType) => void
 }
 
-let frequencies: EquipmentType[] = ["Any Equipment", "Dumbbells Only", "Pull-up Bar", "Ballet Barre", "Resistance Bands", "No Equipment"];
+let frequencies: EquipmentType[] = ["Any Equipment", "Dumbbells Only", "Pull-up Bar", "Ballet Barre", "Resistance Bands", "No Equipment"]
 
 export default function EquipmentDropDown({ equipment, setEquipment }: DropDownProps) {
   return (
@@ -54,12 +52,12 @@ export default function EquipmentDropDown({ equipment, setEquipment }: DropDownP
               <Menu.Item key={equipmentItem}>
                 {({ active }) => (
                   <button
-                  onClick={() => setEquipment(equipmentItem)}
-                  className={classNames(
-                    active ? "bg-gray-200 text-black" : "text-black ",
-                    "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between",
-                  )}
-                >
+                    onClick={() => setEquipment(equipmentItem)}
+                    className={classNames(
+                      active ? "bg-gray-200 text-black" : "text-black ",
+                      "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between"
+                    )}
+                  >
                     <span>{equipmentItem}</span>
                     {equipment === equipmentItem ? (
                       <CheckIcon className="w-4 h-4" />
@@ -72,5 +70,5 @@ export default function EquipmentDropDown({ equipment, setEquipment }: DropDownP
         </Menu.Items>
       </Transition>
     </Menu>
-  );
+  )
 }

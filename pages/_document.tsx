@@ -1,4 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   render() {
@@ -24,11 +24,11 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://cortez.link/a/routines-meta.png"
+            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/82sWL59h2p?ixlib=js-3.8.0&s=efcf0151373cf60177ed7a877dd6edf4"
           />
           <meta
             name="twitter:image"
-            content="https://cortez.link/a/routines-meta.png"
+            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/82sWL59h2p?ixlib=js-3.8.0&s=efcf0151373cf60177ed7a877dd6edf4"
           />
         </Head>
         <body>
@@ -36,8 +36,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

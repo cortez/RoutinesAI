@@ -1,23 +1,20 @@
-import { Menu, Transition } from "@headlessui/react";
-import {
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-} from "@heroicons/react/20/solid";
-import { Fragment } from "react";
+import { Fragment } from 'react'
+
+import { Menu, Transition } from '@headlessui/react'
+import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(" ")
 }
 
-export type FrequencyType = "1" | "2" | "3" | "4" | "5" | "6" | "7";
+export type FrequencyType = "1" | "2" | "3" | "4" | "5" | "6" | "7"
 
 interface DropDownProps {
-  frequency: FrequencyType;
-  setFrequency: (frequency: FrequencyType) => void;
+  frequency: FrequencyType
+  setFrequency: (frequency: FrequencyType) => void
 }
 
-let frequencies: FrequencyType[] = ["1", "2", "3", "4", "5", "6", "7"];
+let frequencies: FrequencyType[] = ["1", "2", "3", "4", "5", "6", "7"]
 
 export default function FrequencyDropDown({ frequency, setFrequency }: DropDownProps) {
   return (
@@ -35,7 +32,6 @@ export default function FrequencyDropDown({ frequency, setFrequency }: DropDownP
           />
         </Menu.Button>
       </div>
-
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
@@ -57,7 +53,7 @@ export default function FrequencyDropDown({ frequency, setFrequency }: DropDownP
                     onClick={() => setFrequency(frequencyItem)}
                     className={classNames(
                       active ? "bg-gray-200 text-black" : "text-black",
-                      "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between",
+                      "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between"
                     )}
                   >
                     <span>{frequencyItem}</span>
@@ -72,5 +68,5 @@ export default function FrequencyDropDown({ frequency, setFrequency }: DropDownP
         </Menu.Items>
       </Transition>
     </Menu>
-  );
+  )
 }
