@@ -32,7 +32,7 @@ class MyDocument extends Document {
           />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="white" />
           <meta name="apple-mobile-web-app-title" content="Routines AI" />
         </Head>
         <body>
