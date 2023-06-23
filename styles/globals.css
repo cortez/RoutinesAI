@@ -3,31 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "ibm-plex-sans";
-	src: url("https://cortez.link/fonts/IBM-Plex-Sans/IBMPlexSans-Regular.ttf");
+	font-family: "satoshi";
+	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
 	font-weight: 500;
 	font-display: swap;
 }
 
-@font-face {
-	font-family: "ibm-plex-sans";
-	src: url("https://cortez.link/fonts/IBM-Plex-Sans/IBMPlexSans-Medium.ttf");
-	font-weight: 600;
-	font-display: swap;
-}
-
 * {
-  font-family: "ibm-plex-sans", sans-serif;
+  font-family: "satoshi", ui-sans-serif, system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-a, .mobile-text {
-  font-weight: 600 !important;
-}
-
-.loading-button {
-	margin: 10px 0 -1px 0;
+h2 {
+  @apply mt-6 mb-3;
 }
 
 .background-animate {
