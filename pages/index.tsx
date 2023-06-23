@@ -127,10 +127,10 @@ const Home: NextPage = () => {
           toastOptions={{ duration: 2000 }}
         />
         <AnimatePresence mode="wait">
-          <motion.div className="space-y-8 sm:mb-32 mb-16">
+          <motion.div className="space-y-8 sm:mb-32 mb-8">
             {generatedWorkouts && (
               <>
-                <h1 className="text-center text-2xl text-black mx-auto sm:mt-14 mt-16">
+                <h1 className="text-center text-2xl text-black mx-auto mt-10 sm:mt-14">
                   Your generated workouts
                 </h1>
                 <div className="text-center space-y-4 flex flex-col items-center justify-center max-w-lg mx-auto">
