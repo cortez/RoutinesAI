@@ -43,7 +43,7 @@ const Choices = ({ choices, selectedChoice, setSelectedChoice }: Props) => {
             className="hidden"
           />
           <div
-            className={`cursor-pointer rounded-xl inline-block mb-2 mr-2 py-1.5 px-[13px] border-2 relative focus:outline-black transition-all ${selectedChoice === choice ? 'bg-blue bg-opacity-25 hover:bg-opacity-[35%] border-blue' : 'hover:bg-gray-200 hover:border-gray-200 bg-gray-100 border-gray-100'}`}
+            className={`cursor-pointer text-center rounded-xl inline-block mb-2 mr-2 min-w-[40px] py-1.5 px-[13px] border-2 relative focus:outline-black transition-all ${selectedChoice === choice ? 'bg-blue bg-opacity-25 hover:bg-opacity-[35%] border-blue' : 'hover:bg-gray-200 hover:border-gray-200 bg-gray-100 border-gray-100'}`}
             tabIndex={0}
             data-choice={choice}
             onClick={(event) => {
