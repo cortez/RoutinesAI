@@ -9,7 +9,11 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'blue': '#38BDF8'
+      },
+    },
   },
   plugins: [require("@tailwindcss/forms"), require("@headlessui/tailwindcss")],
-};
+}
