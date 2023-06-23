@@ -52,6 +52,7 @@ const Choices = ({ choices, selectedChoice, setSelectedChoice }: Props) => {
                 setSelectedChoice(choice)
               }
             }}
+            style={{ userSelect: 'none' }}
           >
             {choice}
           </div>
