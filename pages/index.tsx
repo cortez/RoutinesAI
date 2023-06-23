@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             </button>
           ) : (
             <button
-              className="mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-400 to-blue-500 background-animate rounded-xl px-14 py-3 focus:outline-black select-none cursor-no-drop transition"
+              className="mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-300 to-blue background-animate rounded-xl px-14 py-3 focus:outline-black select-none cursor-no-drop transition"
             >
               <LoadingDots color="white" style="large" />
             </button>
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
                 <h1 className="text-center text-2xl text-black mx-auto sm:mt-14 mt-16">
                   Your generated workouts
                 </h1>
-                <div className="text-center space-y-5 flex flex-col items-center justify-center max-w-lg mx-auto">
+                <div className="text-center space-y-4 flex flex-col items-center justify-center max-w-lg mx-auto">
                   {generatedWorkouts
                     .split("Workout ")
                     .splice(1)
