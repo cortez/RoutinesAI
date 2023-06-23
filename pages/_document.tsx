@@ -30,6 +30,10 @@ class MyDocument extends Document {
             name="twitter:image"
             content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/82sWL59h2p?ixlib=js-3.8.0&s=efcf0151373cf60177ed7a877dd6edf4"
           />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
+          <meta name="apple-mobile-web-app-title" content="Routines AI" />
         </Head>
         <body>
           <Main />
