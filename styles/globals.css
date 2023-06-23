@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "ibm-plex-sans";
+	font-family: "satoshi";
 	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
 	font-weight: 500;
 	font-display: swap;
 }
 
 * {
-  font-family: "ibm-plex-sans", sans-serif;
+  font-family: "satoshi", ui-sans-serif, system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
