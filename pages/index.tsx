@@ -68,7 +68,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="p-5 text-[var(--text)] bg-[var(--background)]">
+    <div className="p-5">
       <Head>
         <title>Routines AI</title>
         <link rel="icon" href="/favicon.ico" />
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
         <div className="flex justify-center">
           {!loading ? (
             <button
-              className="focus:outline-2 outline-blue scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-[var(--button)] rounded-xl text-white px-6 py-3 select-none active:scale-100 transition"
+              className="focus:outline-2 outline-blue hover:brightness-110 scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-[var(--button)] rounded-xl text-white px-6 py-3 select-none active:scale-100 transition"
               onClick={(e) => generateWorkout(e)}
             >
               <Image
