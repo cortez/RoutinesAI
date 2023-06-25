@@ -100,7 +100,7 @@ const Home: NextPage = () => {
         <div className="flex justify-center">
           {!loading ? (
             <button
-              className="mt-10 xl:mb-2 sm:mb-0 mb-2 bg-black rounded-xl text-white px-6 py-3 focus:outline-black select-none hover:bg-neutral-700 active:scale-95 transition"
+              className="scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-black rounded-xl text-white px-6 py-3 focus:outline-black select-none active:scale-100 transition"
               onClick={(e) => generateWorkout(e)}
             >
               <Image
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             </button>
           ) : (
             <button
-              className="mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-300 to-blue background-animate rounded-xl px-14 py-3 focus:outline-black select-none cursor-no-drop transition"
+              className="scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-300 to-blue background-animate rounded-xl px-14 py-3 focus:outline-black select-none cursor-no-drop transition"
             >
               <LoadingDots color="white" style="large" />
             </button>
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
                       generatedWorkout = generatedWorkout.replace(/\./g, '')
                       return (
                         <div
-                          className="bg-gray-100 hover:bg-gray-200 rounded-xl p-4 transition cursor-copy"
+                          className="bg-gray-100 hover:bg-gray-200 active:scale-95 rounded-xl p-4 transition-all cursor-copy"
                           onClick={() => {
                             navigator.clipboard.writeText(generatedWorkout)
                             toast("Copied workout", {
