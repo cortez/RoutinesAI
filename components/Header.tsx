@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center mb-16">
+    <header className="flex justify-between items-center mb-10 lg:mb-14">
       <Link href="/" className="-mt-0.5 text-lg focus:outline-black" target="_blank" rel="noreferrer">
         <img src="../favicon.ico" className="w-6 inline -mt-1 mr-1.5" alt="Logo" />
         Routines AI
