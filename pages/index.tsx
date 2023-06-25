@@ -68,14 +68,14 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="p-5">
+    <div className="p-5 text-[var(--text)] bg-[var(--background)]">
       <Head>
         <title>Routines AI</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
 
-      <div className="bg-white max-w-[350px] mx-auto flex-col items-center">
+      <div className="max-w-[350px] mx-auto flex-col items-center">
         <h2>How many workouts/week do you want to do?</h2>
         <Choices
           choices={frequencyChoices}
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
         <div className="flex justify-center">
           {!loading ? (
             <button
-              className="scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-black rounded-xl text-white px-6 py-3 focus:outline-black select-none active:scale-100 transition"
+              className="focus:outline-2 outline-blue scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-[var(--button)] rounded-xl text-white px-6 py-3 select-none active:scale-100 transition"
               onClick={(e) => generateWorkout(e)}
             >
               <Image
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             </button>
           ) : (
             <button
-              className="scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-300 to-blue background-animate rounded-xl px-14 py-3 focus:outline-black select-none cursor-no-drop transition"
+              className="focus:outline-2 outline-blue scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-300 to-blue background-animate rounded-xl px-14 py-3 select-none cursor-no-drop transition"
             >
               <LoadingDots color="white" style="large" />
             </button>
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
           <motion.div className="space-y-8 sm:mb-32 mb-8">
             {generatedWorkouts && (
               <>
-                <h1 className="text-center text-2xl text-black mx-auto mt-10 sm:mt-14">
+                <h1 className="text-center text-2xl text-[var(--text)] mx-auto mt-10 sm:mt-14">
                   Your generated workouts
                 </h1>
                 <div className="text-center space-y-4 flex flex-col items-center justify-center max-w-lg mx-auto">
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
                       generatedWorkout = generatedWorkout.replace(/\./g, '')
                       return (
                         <div
-                          className="bg-gray-100 hover:bg-gray-200 active:scale-95 rounded-xl p-4 transition-all cursor-copy"
+                          className="bg-[var(--gray)] hover:bg-[var(--gray-hover)] active:scale-95 rounded-xl p-4 transition-all cursor-copy"
                           onClick={() => {
                             navigator.clipboard.writeText(generatedWorkout)
                             toast("Copied workout", {
