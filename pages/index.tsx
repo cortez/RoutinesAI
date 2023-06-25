@@ -124,10 +124,10 @@ const Home: NextPage = () => {
         <Toaster
           position="top-center"
           reverseOrder={false}
-          toastOptions={{ duration: 2000 }}
+          toastOptions={{ duration: 2000, style: { borderRadius: '12px' } }}
         />
         <AnimatePresence mode="wait">
-          <motion.div className="space-y-8 sm:mb-32 mb-8">
+          <motion.div className="space-y-6 sm:mb-32 mb-8">
             {generatedWorkouts && (
               <>
                 <h1 className="text-center text-2xl text-[var(--text)] mx-auto mt-10 sm:mt-14">
