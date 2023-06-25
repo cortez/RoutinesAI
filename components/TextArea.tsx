@@ -16,7 +16,7 @@ const TextArea: React.FC<Props> = ({ placeholder }) => {
       value={input}
       onChange={handleInputChange}
       rows={1}
-      className="transition-all resize-none placeholder-gray-400 w-full rounded-xl border-2 hover:border-gray-200 border-gray-100 focus:border-black focus:ring-white"
+      className="transition-all resize-none bg-[var(--background)] placeholder-[var(--placeholder)] w-full rounded-xl border-2 hover:border-[var(--gray-hover)] border-[var(--gray)] focus:border-[var(--text)] focus:ring-0"
       placeholder={placeholder}
     />
   )

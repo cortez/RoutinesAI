@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text: #000000;
+  --background: #FFFFFF;
+  --gray: #F2F2F7;
+  --gray-hover: #E8E8ED;
+  --placeholder: #9E9EA3;
+  --button: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #FEFEFE;
+    --background: #1C1C1E;
+    --gray: #272729;
+    --gray-hover: #313133;
+    --button: #2C2C2E;
+  }
+}
+
 @font-face {
 	font-family: "satoshi";
 	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
@@ -16,6 +35,10 @@
 
 h2 {
   @apply mt-6 mb-3;
+}
+
+img {
+  pointer-events: none;
 }
 
 .background-animate {
