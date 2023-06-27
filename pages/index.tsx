@@ -75,7 +75,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
 
-      <div className="max-w-[350px] mx-auto flex-col items-center">
+      <div className="max-w-[350px] mx-auto flex-col items-center 2xl:mt-[12vh]">
         <h2>How many workouts/week do you want to do?</h2>
         <Choices
           choices={frequencyChoices}
