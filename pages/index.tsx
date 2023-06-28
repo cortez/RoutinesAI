@@ -100,7 +100,7 @@ const Home: NextPage = () => {
         <div className="flex justify-center">
           {!loading ? (
             <button
-              className="focus:outline-2 outline-blue hover:brightness-105 scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-blue rounded-xl text-black px-6 py-3 select-none active:scale-100 transition"
+              className="focus:outline-2 outline-[var(--text)] active:brightness-95 scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-blue rounded-xl text-white px-6 py-3 select-none active:scale-100 transition"
               onClick={(e) => generateWorkout(e)}
             >
               <Image
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             </button>
           ) : (
             <button
-              className="focus:outline-2 outline-blue scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-300 to-blue background-animate rounded-xl px-14 py-3 select-none cursor-no-drop transition"
+              className="focus:outline-2 outline-[var(--text)] scale-105 mt-10 xl:mb-2 sm:mb-0 mb-2 bg-gradient-to-r from-sky-300 to-blue background-animate rounded-xl px-14 py-3 select-none cursor-no-drop transition"
             >
               <LoadingDots color="white" style="large" />
             </button>
