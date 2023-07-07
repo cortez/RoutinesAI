@@ -24,11 +24,11 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/82sWL59h2p?ixlib=js-3.8.0&s=efcf0151373cf60177ed7a877dd6edf4"
+            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/lrpV2ioJfm?ixlib=js-3.8.0&s=8d84a986663a60ba957c32806b70ff0a"
           />
           <meta
             name="twitter:image"
-            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/82sWL59h2p?ixlib=js-3.8.0&s=efcf0151373cf60177ed7a877dd6edf4"
+            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/lrpV2ioJfm?ixlib=js-3.8.0&s=8d84a986663a60ba957c32806b70ff0a"
           />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
