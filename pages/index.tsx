@@ -10,20 +10,20 @@ import { useState } from 'react'
 import { Toaster, toast } from 'react-hot-toast'
 
 import Choices from '../components/Choices'
-import TextArea from '../components/TextArea'
+import TextArea from '../components/InputBox'
 
 import Header from '../components/Header'
 import LoadingDots from '../components/LoadingDots'
 
 const frequencyChoices = ['1', '2', '3', '4', '5', '6', '7']
-const equipmentChoices = ['Any Equipment', 'Dumbbells Only', 'Pull-up Bar', 'Ballet Barre', 'Resistance Bands', 'No Equipment']
+const equipmentChoices = ['Any Equipment', 'Dumbbells Only', 'Kettlebell', 'Pull-up Bar', 'Ballet Barre', 'Resistance Bands', 'No Equipment']
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false)
   const [frequency, setFrequency] = useState("1")
   const [equipment, setEquipment] = useState("Any Equipment")
-  const [goal, setGoal] = useState("")
-  const [limitations, setLimitations] = useState("")
+  const [goal, _setGoal] = useState("")
+  const [limitations, _setLimitations] = useState("")
   const [generatedWorkouts, setGeneratedWorkouts] = useState<String>("")
 
   const prompt =
