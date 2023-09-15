@@ -4,27 +4,27 @@
 
 :root {
   --text: #000000;
-  --background: #FFFFFF;
-  --gray: #F2F2F7;
-  --gray-hover: #E8E8ED;
-  --placeholder: #9E9EA3;
+  --background: #ffffff;
+  --gray: #f2f2f7;
+  --gray-hover: #e8e8ed;
+  --placeholder: #9e9ea3;
   --button: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #FEFEFE;
-    --background: #1C1C1E;
+    --text: #fefefe;
+    --background: #1c1c1e;
     --gray: #272729;
     --gray-hover: #313133;
-    --button: #2C2C2E;
+    --button: #2c2c2e;
   }
 }
 
 @font-face {
-	font-family: "satoshi";
-	src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
-	font-display: swap;
+  font-family: "satoshi";
+  src: url("https://cortez.link/fonts/Satoshi/Satoshi-Medium.otf");
+  font-display: swap;
 }
 
 * {
@@ -36,6 +36,7 @@
 html {
   color: var(--text);
   background-color: var(--background);
+  -webkit-tap-highlight-color: transparent;
 }
 
 h2 {
@@ -47,18 +48,18 @@ img {
 }
 
 .background-animate {
-    background-size: 400%;
-    -webkit-animation: AnimationName 3s ease infinite;
-    -moz-animation: AnimationName 3s ease infinite;
-    animation: AnimationName 3s ease infinite;
-  }
+  background-size: 400%;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+}
 
-  @keyframes AnimationName {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+}
