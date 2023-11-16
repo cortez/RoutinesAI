@@ -2,18 +2,12 @@ import Link from "next/link"
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center mb-10 lg:mb-14">
+    <header className="flex justify-between items-center pb-10">
       <Link
         href="/"
-        className="text-lg focus:outline-black"
-        target="_blank"
-        rel="noreferrer"
+        className="flex gap-2 items-center text-lg focus:outline-black"
       >
-        <img
-          src="../favicon.ico"
-          className="w-6 inline -mt-1 mr-2"
-          alt="Logo"
-        />
+        <img src="../favicon.ico" className="w-6" alt="Logo" />
         Routines AI
       </Link>
       <Link

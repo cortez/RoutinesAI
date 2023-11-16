@@ -1,4 +1,4 @@
-import { Fragment, useRef, useEffect } from 'react'
+import { Fragment, useRef, useEffect } from "react"
 
 type Props = {
   choices: string[]
@@ -15,17 +15,17 @@ const Choices = ({ choices, selectedChoice, setSelectedChoice }: Props) => {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Enter') {
+      if (event.key === "Enter") {
         const focusedElement = document.activeElement as HTMLElement
         if (containerRef.current?.contains(focusedElement)) {
-          setSelectedChoice(focusedElement.getAttribute('data-choice') || '')
+          setSelectedChoice(focusedElement.getAttribute("data-choice") || "")
         }
       }
     }
 
-    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener("keydown", handleKeyDown)
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener("keydown", handleKeyDown)
     }
   }, [setSelectedChoice])
 
@@ -43,7 +43,11 @@ const Choices = ({ choices, selectedChoice, setSelectedChoice }: Props) => {
             className="hidden"
           />
           <div
-            className={`active:scale-95 cursor-pointer text-center rounded-xl inline-block mb-2 mr-2 min-w-[40px] py-1.5 px-[13px] border-2 focus:border-blue focus:outline-0 relative transition-all ${selectedChoice === choice ? 'bg-blue bg-opacity-25 hover:bg-opacity-[35%] border-blue' : 'hover:bg-[var(--gray-hover)] hover:border-[var(--gray-hover)] bg-[var(--gray)] border-[var(--gray)]'}`}
+            className={`active:scale-95 cursor-pointer text-center rounded-xl inline-block mb-2 mr-2 min-w-[40px] py-1.5 px-[13px] border-2 focus:border-blue focus:outline-0 relative transition-all ${
+              selectedChoice === choice
+                ? "bg-blue bg-opacity-25 hover:bg-opacity-[35%] border-blue"
+                : "hover:bg-[var(--gray-hover)] hover:border-[var(--gray-hover)] bg-[var(--gray)] border-[var(--gray)]"
+            }`}
             tabIndex={0}
             data-choice={choice}
             onClick={(event) => {
@@ -51,11 +55,11 @@ const Choices = ({ choices, selectedChoice, setSelectedChoice }: Props) => {
               setSelectedChoice(choice)
             }}
             onKeyDown={(event) => {
-              if (event.key === 'Enter') {
+              if (event.key === "Enter") {
                 setSelectedChoice(choice)
               }
             }}
-            style={{ userSelect: 'none' }}
+            style={{ userSelect: "none" }}
           >
             {choice}
           </div>
