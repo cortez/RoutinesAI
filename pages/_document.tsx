@@ -1,4 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from "next/document"
 
 class MyDocument extends Document {
   render() {
@@ -24,15 +24,18 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/lrpV2ioJfm?ixlib=js-3.8.0&s=8d84a986663a60ba957c32806b70ff0a"
+            content="https://rstr.in/mo3ymucdlps90r/routines-ai/-8Iz9ImUdY1"
           />
           <meta
             name="twitter:image"
-            content="https://cdn.raster.app/mo3ymucdlps90r/routines-ai/lrpV2ioJfm?ixlib=js-3.8.0&s=8d84a986663a60ba957c32806b70ff0a"
+            content="https://rstr.in/mo3ymucdlps90r/routines-ai/-8Iz9ImUdY1"
           />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
           <meta name="apple-mobile-web-app-title" content="Routines AI" />
         </Head>
         <body>
