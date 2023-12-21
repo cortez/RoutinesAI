@@ -3,11 +3,11 @@ import type { NextRequest } from 'next/server'
 import { OpenAIStream, OpenAIStreamPayload } from '../../utils/OpenAIStream'
 
 if (!process.env.OPENAI_API_KEY) {
-  throw new Error("Missing OpenAI API Key")
+  throw new Error('Missing OpenAI API Key')
 }
 
 export const config = {
-  runtime: "edge"
+  runtime: 'edge'
 }
 
 const handler = async (req: NextRequest): Promise<Response> => {
@@ -16,11 +16,11 @@ const handler = async (req: NextRequest): Promise<Response> => {
   }
 
   if (!prompt) {
-    return new Response("No prompt in the request", { status: 400 })
+    return new Response('No prompt in the request', { status: 400 })
   }
 
   const payload: OpenAIStreamPayload = {
-    model: "text-davinci-003",
+    model: 'gpt-3.5-turbo-instruct',
     prompt,
     temperature: 0.7,
     top_p: 1,
