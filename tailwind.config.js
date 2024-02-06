@@ -4,16 +4,16 @@ module.exports = {
     hoverOnlyWhenSupported: true
   },
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}"
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
       colors: {
-        blue: "#0B99FF"
+        blue: '#0B99FF'
       }
     }
   },
-  plugins: [require("@tailwindcss/forms"), require("@headlessui/tailwindcss")]
+  plugins: [require('@tailwindcss/forms'), require('@headlessui/tailwindcss')]
 }

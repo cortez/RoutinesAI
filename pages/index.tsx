@@ -10,7 +10,7 @@ import { useState } from 'react'
 import { Toaster, toast } from 'react-hot-toast'
 
 import Choices from '../components/Choices'
-import TextArea from '../components/InputBox'
+import Input from '../components/Input'
 
 import Header from '../components/Header'
 import LoadingDots from '../components/LoadingDots'
@@ -81,6 +81,7 @@ const Home: NextPage = () => {
         <title>Routines AI</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
       <Header />
 
       <div className='max-w-[350px] mx-auto flex-col items-center xl:mt-14 2xl:mt-[12vh]'>
@@ -99,10 +100,10 @@ const Home: NextPage = () => {
         />
 
         <h2>What is your main goal?</h2>
-        <TextArea placeholder='e.g. Lose Weight' />
+        <Input placeholder='e.g. Lose Weight' />
 
         <h2>Name any limitations or leave blank.</h2>
-        <TextArea placeholder={'e.g. Sprained Ankle'} />
+        <Input placeholder={'e.g. Sprained Ankle'} />
 
         <div className='flex justify-center'>
           {!loading ? (
@@ -138,6 +139,7 @@ const Home: NextPage = () => {
                 <h1 className='text-center text-2xl text-[var(--text)] mx-auto mt-10 sm:mt-14'>
                   Your generated workouts
                 </h1>
+
                 <div className='text-center space-y-4 flex flex-col items-center justify-center max-w-lg mx-auto'>
                   {generatedWorkouts
                     .split('Workout ')
